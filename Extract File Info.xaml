@@ -109,7 +109,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This work flow loops through the list of files in the View Log/Trace window and outputs the name of the file that needs to be downloaded&#xD;&#xA;&#xD;&#xA;The criteria of the file to be downloaded is determined by the file type that is passed as a string array" DisplayName="Extract_File_Info" sap:VirtualizedContainerService.HintSize="724,2357" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This work flow loops through the list of files in the View Log/Trace window and outputs the name of the file that needs to be downloaded&#xA;&#xA;The criteria of the file to be downloaded is determined by the file type that is passed as a string array" DisplayName="Extract_File_Info" sap:VirtualizedContainerService.HintSize="724,2357" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dtFileInfoTable" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dtFilteredTable" />
