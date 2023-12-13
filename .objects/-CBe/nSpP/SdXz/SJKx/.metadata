@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Approve",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "SJKxJ_AtnE2YEdapdTDhUw",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/SJKxJ_AtnE2YEdapdTDhUw",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/SdXzF6BJik2bgUVe2Kvyvg",
+  "Created": "2023-11-28T08:52:43.9298909Z",
+  "Updated": "2023-11-28T08:52:43.9298909Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

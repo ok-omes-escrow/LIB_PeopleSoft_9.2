@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Look Up Search",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "W3nzB4DFD0ef-1Kpw3OkPA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/W3nzB4DFD0ef-1Kpw3OkPA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/w3Rb470Xh06Iz-2o_a1KcQ",
+  "Created": "2023-12-07T14:14:26.1713734Z",
+  "Updated": "2023-12-07T14:14:26.1713734Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

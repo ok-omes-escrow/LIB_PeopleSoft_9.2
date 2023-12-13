@@ -1,0 +1,253 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Refresh_Process_Monitor" this:Refresh_Process_Monitor.in_intDuration="1" this:Refresh_Process_Monitor.in_strDurationType="Days" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_intDuration" Type="InArgument(x:Int32)" />
+    <x:Property Name="in_strFilterUserID" Type="InArgument(x:String)" />
+    <x:Property Name="in_strDurationType" Type="InArgument(x:String)" />
+    <x:Property Name="in_str_PeoplesoftURL" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
+  <sap:VirtualizedContainerService.HintSize>1488,2649</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Refresh_Process_Monitor_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Refresh_Process_Monitor" sap:VirtualizedContainerService.HintSize="1112,2584" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="intVeryShortTimeout" />
+      <Variable x:TypeArguments="x:Int32" Default="3" Name="intShortTimeout" />
+      <Variable x:TypeArguments="x:Int32" Default="5" Name="intMediumTimeout" />
+      <Variable x:TypeArguments="x:Int32" Default="10" Name="intLongTimeout" />
+      <Variable x:TypeArguments="x:Int32" Default="30" Name="intVeryLongTimeout" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshing Process Monitor...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="1050,2111" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1894" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Refresh button'" sap:VirtualizedContainerService.HintSize="954,1779" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Timeout="[intMediumTimeout]" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1562" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Populating filter options&quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Clear box'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="OlIP3IHBskG2L5MQDBtACA" DesignTimeRectangle="1000, 303, 97, 16" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Clear box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_DERIVED_PTPMNCLEARFILTER' aaname='Clear Filter' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_DERIVED_PTPMNCLEARFILTER' aaname='Clear Filter' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Clear' /&gt;" Guid="8a57c0b5-efb6-4c3f-96ec-94db6806a95a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVGhD7ZfBDYMwDAA7TBfrBB0CsUVHYAMGqMQH0Ue/fBEM4ZLYgJ0AygtM5ZP8SF1UyRfb9AaGOkyKQkyKQkyKQtRJ6csK7s83iwZqyjl8Pv9CT+d/RJGUFjInISg4Sqqg6NjZpBxD/YqFTPCcSTkM7JLsQ8cdYikDFPk06lzIcQfdFx5zjuLVUtL97tiFZbP+7EnokOILt4yoPaQUlPkoB39y4Libirsi+4MC8LP1kXk2iqSk3VIhxRU4Kih2Dhcl4aJiqRq4dKdgV7CxxEIWOhxxUkrK2DySa+wU1klcyt7LAULjyYXYIyYlCTGWArbevrBTdsae3x9Bnha/SUmCbnUgBgu/9T+Fnpm7YIQX3UvhY5G+P4swKUn4rqDCYcibHnfUUugpeJFRKs/RfvEiTYqRiElRiElRiElRiElRB8APCle88ADrNVoAAAAASUVORK5CYII=" InformativeScreenshot="7ed4b71c03a1061902a78dfbd0cb31de.png" Reference="ao86_PT9xkmS2L7lE3WumQ/fAE-V9kkEEKbrmhCgwZx3Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1000, 260, 97, 16" ElementType="Button" FriendlyName="'Clear box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF3SURBVGhD7ZbRDcIgEEAdxsWcwCGMW3QEN+gAJv4Y/eivv0aHOIGDcgc0oEnrJb2XkEgpR73H0W5AEYdKEYhKEYhKEchCUh5w2J9hW2wXOD39bY28+svPc+vgsx7uvvsHFpVS+qOY4G+SO3fSVIrhDafjGXb92/crPAfYzVIhAZViwDEm5X7zxxO2cSy5vu0eWGnd4MSye508fi8lHoHJvPCsPZ+/pCQhx9cNrhP9TFpSKSG5LLaTR6sJq3EU48bJGiwmrsfGs3jzIuBFTwVg8jJ5NIlFKTQGwLVLKs9C5pXmRJJN4JjeVHPwt0rBxKS7r0FeScpxgBd2Db4qijHCPL5OXcBKpFjsjmZiXMIrf74qBdfKKmUC3BxUzsqlhOsxqQ0Jba2U5MVeI8ZZvRSD/6IKY7hzSfUYXEWFxFelGJKYFoyLRyD9jdDPcpViCO+AJNHm/rHRpLdIsXgxseUfA2x8rKzVSFG+QaUIRKUIRKUIRKWIA+ADfKZXUBR07ZcAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID Filter field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Text="[in_strFilterUserID]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="Yj46RXd12kWOb78dchNjZA" DesignTimeRectangle="114, 253, 138, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'User ID Filter field'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='User ID' id='PMN_FILTER_WRK_WS_OPRID' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='User ID' id='PMN_FILTER_WRK_WS_OPRID' type='text' class='PSEDITBOX PTCPEDITBOXWITHICON ' /&gt;" Guid="39d2dffc-83be-458e-be84-dbe22c289b62" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAAiCAYAAACJI+GdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVHhe7dzNi9pAGMfx/qHiCx4EEUER/AvszV5EsXopIvRStVZsD4onRVhYaWmttl23FBHEtqio6Bb1Kc9knN3sGg05mt8HBs1McvuSFyQ+IwALEA5YgnDAEl04V51P9PLVa3r+IoWBIQb3wF08psLhxTflD/T7z185A0CiB+7i6lofjwqHy0I0cMx6vaG372tyS6PC4dMSgJHrj5/lNw3CAVO+3dzKbxqEA6YgHJsZj8dUKpWoUCiIT962AuHYxGKxoEQiQQ6H48lIJpO0XC7lnuYgHBtYr9cUDoePRnMY0WiUNpuNPOI8hGMDmUxGBeLz+ahSqVCn06FqtUp+v1+t5XI5ecR5COfC8T3MIYxAIEDT6VSuaPgSFgqFxLrL5aL5fC5XTkM4F65Wq6lwGo2GnNVrt9tqn1arJWdPQzgXrlwuqyj6/b6c1RuNRmofvnyZgXAuHJ9lDlHU63U5q9ftdtU+OOOAMJlMVBT8ZLXdbuXKvcNjutPpxD0O3Eun0yqeWCxGg8FABLTf73WXskgkQrvdTh51GsKxgdVqRcFgUAVyaqRSKRHUOQjHJmazGcXj8aOx8KXK4/Go7Ww2K48yhnBsZjgcUrFYFL9TNZtNcQ/Eer0eud1uFU8+nxfzRhAOKPx09TAeo8d3hnBAh+Pxer1nH8sRDjxh5pdyhAOWIBywBOGAJQgHLEE4YIlhOHghD4zc3f2jL73vckujwhGvAL/DK8Cgx9Hc/PxFX/s/5IxGhcP4/WD86QDGwyH+dODRe+NMFw6AOUT/AdPh5BldeogsAAAAAElFTkSuQmCC" InformativeScreenshot="dd00661b141cbac3953f9a745c9a1d41.png" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/2AH1nOQKCk661871R7XJFQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="53, 262, 51, 16" ElementType="Text" FriendlyName="'User ID Filter field'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_WS_OPRID_LBL' tag='LABEL' aaname='User ID' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_WS_OPRID_LBL' tag='LABEL' aaname='User ID' type='' class='PSEDITBOXLABEL' check:text='User ID' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAUCAYAAAAp46XeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEUSURBVFhH7ZPhDYQgDIVvToZhEyZhDpdgiR4o1ddSfojnJRhf8hIFKe+T8qEH64WbVS/crAK4hYJz5FzIT0pLyON5zkdKdegfStFv+4aaKEXya0bD/A3oOXDFKt+ccDoHQOMBDsMtYSu2uwHnesY8hIxcp1l/Aq6IMwLdEFwDxt4LKzA2h7LaC3951Sk4Y+4SnJFnVRMqS6wBuF6NoiE4yD/WlvwOxpDdk832MVcwgli6Ac5T2V9Iw7E0pDpZywLOCgkaunMwB3CJot8CyMUw3u0h+WOsthT6Odxxx3FLgMsy2u0wnyjAau+bHptJ1xpX4XpW9SRckVmgvRtt6+lvNCC0+w1wa7srtXAP0gs3qx4MR/QF/5hvcSK+AVYAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Duration Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Text="[in_intDuration.ToString]" Version="V3">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="ViuaH6JFSkG9GcBwplB-4w" DesignTimeRectangle="712, 253, 101, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Duration field'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERVALUE' tag='INPUT' class='PSEDITBOX' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERVALUE' tag='INPUT' class='PSEDITBOX' type='text' aaname='' /&gt;" Guid="55c50580-988f-499e-9e27-7f89e418c769" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAAiCAYAAABcHfeVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD1SURBVGhD7do9asNAFEXh2eHsKupSBtKlmyZN3GQJAoMDWYULO2t40TWyLAWlnnfhHHign24+pnslKH0gGQSSQRuk49d3vL61eHp+YTqNzl8O6xYk/Xj/+IzL9Wf+Qj3S+cvheHpALUgSBChHcpDHvQVJV43ytPYAKWkgGQSSQSAZBJJBIKVojKHUaOf59U8gdU9AJQpISRuHCWcCqjUqSBk7R6slhlGPDaT0gWQQSAaBZBBIBoFkEEgGgeQfSAaBZBBIBoFkEEgGgWTQLhLLkXn6dznytmZ8YM24dzp/OeyuGSv9kKCuGtNndP5rILVBooxF/AJtXhcGmO33WAAAAABJRU5ErkJggg==" InformativeScreenshot="dfc8fe97a4404d795e16fecbc50d2559.png" Reference="ao86_PT9xkmS2L7lE3WumQ/3J2kqVzFck6iT3i0xvoclg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1000, 260, 97, 16" ElementType="Button" FriendlyName="'Duration field'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVGhD7ZY9roMwDIDfAXqILm9jZOnC0KogVSob9z+KX4jzYydBoZXIs4SHT2px4oC/OPCzLAsoslApAlEpAlEpAmkk5QXd7x0uRR5we5fmbDMPj6/n1sF77cZSrA1NpZQeFAv8SXGPLppKMcxw6+5wHeZCrMB7gushHeJRKSHGpIyjO56QEEuuX/oXdlo/WbFsrJXHx4b8hngEJvP8vQ58fktJQo6vEZ4b/zNpSaf44rLcVh7tJuzGIMbGyRosJ67H4lm+YxHwoqcCsHiZPFrEohSaY4Fnn3TeCplXmhNJNgG51qpb/q1TsDDp7tshrySlm2AOOVxXFHP4eXyduoCTSFlZdzQTYwteefiqFFwr65QNcHNQOSeX4q/Hou4o6N5OSV7sNWKe00sxuC8qH8OdS7rHYDvKF74qxZDkDOPcEUh/Y5x+lqsUg38HJIU24wO06HukrDgxkfxjgMVDZ51GivIJKkUgKkUgKkUgKkUcC/wBvCxacl9xf7AAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                  </uix:NTypeInto>
+                  <uix:NSelectItem DisplayName="Select Item 'Day/Week/Year Option'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_strDurationType]" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="5">
+                        <x:String>All</x:String>
+                        <x:String>Days</x:String>
+                        <x:String>Hours</x:String>
+                        <x:String>Minutes</x:String>
+                        <x:String>Years</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="LCIBEMA3102xtC3YlBrILg" DesignTimeRectangle="827, 253, 102, 30" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Interval Select box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERUNIT' tag='SELECT' innertext=' All Days Hours Minutes Years ' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERUNIT' tag='SELECT' innertext=' All Days Hours Minutes Years ' type='' class='PSDROPDOWNLIST' aaname='' /&gt;" Guid="d743514b-9daf-44a9-9f1b-073afc0da8b5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAiCAYAAAC3KkyWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVGhD7ZpNasMwEEZ9kCwSkvv4VtUqzc7QrLrzppt20yMYAi30AlkkEC/anmHqGUv2yJZLIXaiaeaBwNaPwXp8EweUgCICFSUEFSUET9Tu/QMeHnO4u8+0XbGhA3TBaUThwNPzK3x+fdse5VqgA3Sxe2tlNaLQokqKB3SBThyNKIycEhfciYqKGBUlBBUlBBUlBBUlhPNEFQaSJAk0A4WdoozDCKL6Uso8rfpTyEvboZzNJKKQwlTJSnNQV+MwmagqVpDyVNF9p0Qau5Ke00mgt76EPOVr5ad1vV5DWfZfAvs2m429a5lOVNVrqk2tXfBrC631x1O2+1Q+bSIpnWwxH5NIlmX07qvVCk6nk+0FusY+HNtut7a35kKiQvjjfqmsE1SLs2kafpA4MDXz+byRhffYnCTXx7mwqG4JY+O8/HXLpk1f3eSXPeR4PMJyuaR3WiwW1PAa+3jKHNOJos12Y7U02ujWTEdkm6Lh0sZFyxd2OBwaQU4SCgwxmSjvdyU0z35c8MSRIJOzsjcEL42yQTGz2YxK4ZAkZBJRvf9RNI8noE0YF+Xk+XMDv1Hd0iic/X5P6fqNEUTVG+63IXntHFMEBDgpvbLHSmez3g7dCOeJGp3/U9LGJi5R3geIwolGFH183GBJ+ytxJUoZREUJQUUJQUUJIShKD2DGxeABTDrS/KJHmmMAHaCL4JFmBAfQIkZO2/UaOuCSEE+UEisAP+lLVOgNE7XlAAAAAElFTkSuQmCC" InformativeScreenshot="9d398eb913d1657a030991b7c73aa7ee.png" Reference="ao86_PT9xkmS2L7lE3WumQ/-vkLojJUoEG7x9jPTbUBgA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1000, 260, 97, 16" ElementType="Button" FriendlyName="'Interval Select box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVGhD7ZY9roMwDIDfAXqILm9jZOnC0KogVSob9z+KX4jzYydBoZXIs4SHT2px4oC/OPCzLAsoslApAlEpAlEpAmkk5QXd7x0uRR5we5fmbDMPj6/n1sF77cZSrA1NpZQeFAv8SXGPLppKMcxw6+5wHeZCrMB7gushHeJRKSHGpIyjO56QEEuuX/oXdlo/WbFsrJXHx4b8hngEJvP8vQ58fktJQo6vEZ4b/zNpSaf44rLcVh7tJuzGIMbGyRosJ67H4lm+YxHwoqcCsHiZPFrEohSaY4Fnn3TeCplXmhNJNgG51qpb/q1TsDDp7tshrySlm2AOOVxXFHP4eXyduoCTSFlZdzQTYwteefiqFFwr65QNcHNQOSeX4q/Hou4o6N5OSV7sNWKe00sxuC8qH8OdS7rHYDvKF74qxZDkDOPcEUh/Y5x+lqsUg38HJIU24wO06HukrDgxkfxjgMVDZ51GivIJKkUgKkUgKkUgKkUcC/wBvCxacl9xf7AAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Refresh button'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="TsVWtHAXS06PGqEoAQrqyw" DesignTimeRectangle="1000, 260, 97, 16" DesignTimeScaleFactor="1" FriendlyName="'Refresh button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Refresh' /&gt;" Guid="07bb1082-04e0-4bb9-a372-67a0736cf982" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF3SURBVGhD7ZbRDcIgEEAdxsWcwCGMW3QEN+gAJv4Y/eivv0aHOIGDcgc0oEnrJb2XkEgpR73H0W5AEYdKEYhKEYhKEchCUh5w2J9hW2wXOD39bY28+svPc+vgsx7uvvsHFpVS+qOY4G+SO3fSVIrhDafjGXb92/crPAfYzVIhAZViwDEm5X7zxxO2cSy5vu0eWGnd4MSye508fi8lHoHJvPCsPZ+/pCQhx9cNrhP9TFpSKSG5LLaTR6sJq3EU48bJGiwmrsfGs3jzIuBFTwVg8jJ5NIlFKTQGwLVLKs9C5pXmRJJN4JjeVHPwt0rBxKS7r0FeScpxgBd2Db4qijHCPL5OXcBKpFjsjmZiXMIrf74qBdfKKmUC3BxUzsqlhOsxqQ0Jba2U5MVeI8ZZvRSD/6IKY7hzSfUYXEWFxFelGJKYFoyLRyD9jdDPcpViCO+AJNHm/rHRpLdIsXgxseUfA2x8rKzVSFG+QaUIRKUIRKUIRKWIA+ADfKZXUBR07ZcAAAAASUVORK5CYII=" InformativeScreenshot="f24a6e76006d3101afd9dd67c722dad4.png" Reference="ao86_PT9xkmS2L7lE3WumQ/Mz5_a6hpLkyw6q0HaZYJwQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1000, 303, 97, 16" ElementType="Button" FriendlyName="'Refresh button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_DERIVED_PTPMNCLEARFILTER' aaname='Clear Filter' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_DERIVED_PTPMNCLEARFILTER' aaname='Clear Filter' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Clear' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVGhD7ZfBDYMwDAA7TBfrBB0CsUVHYAMGqMQH0Ue/fBEM4ZLYgJ0AygtM5ZP8SF1UyRfb9AaGOkyKQkyKQkyKQtRJ6csK7s83iwZqyjl8Pv9CT+d/RJGUFjInISg4Sqqg6NjZpBxD/YqFTPCcSTkM7JLsQ8cdYikDFPk06lzIcQfdFx5zjuLVUtL97tiFZbP+7EnokOILt4yoPaQUlPkoB39y4Libirsi+4MC8LP1kXk2iqSk3VIhxRU4Kih2Dhcl4aJiqRq4dKdgV7CxxEIWOhxxUkrK2DySa+wU1klcyt7LAULjyYXYIyYlCTGWArbevrBTdsae3x9Bnha/SUmCbnUgBgu/9T+Fnpm7YIQX3UvhY5G+P4swKUn4rqDCYcibHnfUUugpeJFRKs/RfvEiTYqRiElRiElRiElRiElRB8APCle88ADrNVoAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'View All button'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="aP6O80xRW0uXqQpGGOlxiQ" DesignTimeRectangle="1447, 463, 51, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'View All button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='View All' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='View All' type='' class='PTCPGRIDHDRVIEWALLDIVACH' check:text='View All' /&gt;" Guid="6b9b4041-313c-4a03-b2b6-ddf0da0ce01f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAUCAYAAAAp46XeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHoSURBVFhH3ZexigJBDIbvZXwVQRB8B5/Ad1gsfAcrQRC0sRThWsFG1sJ2wUq0FGxzk0xmJ5OJh2shuD8sdzO7k+T7k13wp9vtQltUVRXMZjPo9XqAXK2CC1oul+2Fu9/v7YVDRbjLCYajHQy3N76ldYPVeAed8Ql+p+7vtOL9D+hYQsfVhrmvvBV03e7jPjHsYXWhW2nnDli0EYDE8MWR1x+Ur2tv5n8ZLjhkAVCQUQkHXn9OFRRUE0+OmpjX4cLoZSPnE4SRJSeTZ/ice8ZfwYRQGC28yEBpkj/77HWQploGN4B70iEqKB5K4VJwlIyhjaC1iKULSqXNzs1qBGcVaxYY1gievaeiG0mnMHYJK1dQiJ8Up2WAU27xfEM4HSB3S8L5Lrm1cXkAPM8JMTnGFYZgLGmklAmupqgxnHzISiDhtJO5YhcxVgTGbgrwTN5UyzS8zM6/BFcXVJkve9459Y4q+QJKKNznPCTGGMVUjqyS6pAU5edzb8A5UXAMkieQcLXD9dqJkohR5rUE8aaoc0JpDiWuDeO/B2cVzcoT5yOUfP6zr56TNkDqv3ukGO9NuO9XDXc+n3mrHXo8HhFusVjwdju02Ww8HP5q7ff7sF6v6XfQNws7hmCDwcDDzedz+qdt12QygT/qyj/N2yhdrQAAAABJRU5ErkJggg==" InformativeScreenshot="80635f2c9f4b2e80d1fe8709ac9c1e47.png" Reference="ao86_PT9xkmS2L7lE3WumQ/CWRjnDqTn0qdS6vEtbofUg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1394, 494, 118, 50" ElementType="Text" FriendlyName="'View All button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TH' colName='Actions' innertext='Actions' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='TH' colName='Actions' innertext='Actions' type='' class='PSLEVEL1GRIDCOLUMNHDR' aaname='' check:text='Actions' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAAAUCAYAAADcHS5uAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFeSURBVFhH7ZTLjcQgDEA3DdIUndAJ522CMnLzAokN/k0SaaRZZXJ40kwCxs82+VnXFb6BR/RufLtohrgssFRCKsb765QU3hrvKrZojj2pTkhQrDWHFEghQCrb/38o2hJskhFi3GRjlmuOwIkYop9Gi5YEoSUZM//trUOo82Psibrf7qhcywsz78l70Ttiytg7431DiWLwrYvYXdEZKYn0A06KejEqOEG4xwLjKElENEeIYpIRMj7b7+vcCQpOwWRB9OhKUYoxVZ/E9mdDdOQjz8b/R9eLi84fIQkl5HSZcSTqxeD7SHTuDuaIz4ycLWkm6o7BzstxZrxXdJ4mJSqfI+KeTqJ4yDS2iAjuj65fDJn0ldE9JUroIjdIlA4xA4jN7ocEizTEOzWmSvrCx8gXFefM2B2VHdFgB/xE+SRQ4Rr10F8raSogwrtwtqP6yump5B+jG/OI3o1H9F6s8AevIypmZ4fIlwAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="TsVWtHAXS06PGqEoAQrqyw" DesignTimeRectangle="1000, 260, 97, 16" DesignTimeScaleFactor="1" FriendlyName="'Refresh button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Refresh' /&gt;" Guid="07bb1082-04e0-4bb9-a372-67a0736cf982" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF3SURBVGhD7ZbRDcIgEEAdxsWcwCGMW3QEN+gAJv4Y/eivv0aHOIGDcgc0oEnrJb2XkEgpR73H0W5AEYdKEYhKEYhKEchCUh5w2J9hW2wXOD39bY28+svPc+vgsx7uvvsHFpVS+qOY4G+SO3fSVIrhDafjGXb92/crPAfYzVIhAZViwDEm5X7zxxO2cSy5vu0eWGnd4MSye508fi8lHoHJvPCsPZ+/pCQhx9cNrhP9TFpSKSG5LLaTR6sJq3EU48bJGiwmrsfGs3jzIuBFTwVg8jJ5NIlFKTQGwLVLKs9C5pXmRJJN4JjeVHPwt0rBxKS7r0FeScpxgBd2Db4qijHCPL5OXcBKpFjsjmZiXMIrf74qBdfKKmUC3BxUzsqlhOsxqQ0Jba2U5MVeI8ZZvRSD/6IKY7hzSfUYXEWFxFelGJKYFoyLRyD9jdDPcpViCO+AJNHm/rHRpLdIsXgxseUfA2x8rKzVSFG+QaUIRKUIRKUIRKWIA+ADfKZXUBR07ZcAAAAASUVORK5CYII=" InformativeScreenshot="f24a6e76006d3101afd9dd67c722dad4.png" Reference="ao86_PT9xkmS2L7lE3WumQ/Mz5_a6hpLkyw6q0HaZYJwQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1000, 303, 97, 16" ElementType="Button" FriendlyName="'Refresh button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_DERIVED_PTPMNCLEARFILTER' aaname='Clear Filter' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_DERIVED_PTPMNCLEARFILTER' aaname='Clear Filter' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Clear' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVGhD7ZfBDYMwDAA7TBfrBB0CsUVHYAMGqMQH0Ue/fBEM4ZLYgJ0AygtM5ZP8SF1UyRfb9AaGOkyKQkyKQkyKQtRJ6csK7s83iwZqyjl8Pv9CT+d/RJGUFjInISg4Sqqg6NjZpBxD/YqFTPCcSTkM7JLsQ8cdYikDFPk06lzIcQfdFx5zjuLVUtL97tiFZbP+7EnokOILt4yoPaQUlPkoB39y4Libirsi+4MC8LP1kXk2iqSk3VIhxRU4Kih2Dhcl4aJiqRq4dKdgV7CxxEIWOhxxUkrK2DySa+wU1klcyt7LAULjyYXYIyYlCTGWArbevrBTdsae3x9Bnha/SUmCbnUgBgu/9T+Fnpm7YIQX3UvhY5G+P4swKUn4rqDCYcibHnfUUugpeJFRKs/RfvEiTYqRiElRiElRiElRiElRB8APCle88ADrNVoAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="B0agRuDlK0-bN3GBOd6Fmw" IconBase64="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" InformativeScreenshot="b23c7933ff11926459980d72a65f1db0.jpg" Reference="ao86_PT9xkmS2L7lE3WumQ/25IJ5NWcEECKlFurS8SKlQ" Selector="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" Title="Process Monitor" Url="[in_str_PeoplesoftURL]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshed Process Monitor successfully&quot;]" />
+  </Sequence>
+</Activity>

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Edge: Oracle Dynamic Page",
+  "Description": "This page is a generic page for Peoplesoft",
+  "Type": "Screen",
+  "Id": "ad-gUXmG10WnVBLt7IRMeA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/ad-gUXmG10WnVBLt7IRMeA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/nSpPxvg0_kuOWgXwF3AoOA",
+  "Created": "2023-11-16T13:33:39.9522535Z",
+  "Updated": "2023-12-12T13:22:43.3154855Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

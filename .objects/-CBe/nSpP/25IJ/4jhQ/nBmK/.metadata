@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Return Button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "nBmKVKzyi0iuxHszv6rbBg",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/nBmKVKzyi0iuxHszv6rbBg",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/4jhQQTsV1UevO6QGVSO_cw",
+  "Created": "2023-11-21T13:04:06.2403359Z",
+  "Updated": "2023-11-21T13:04:06.2403359Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

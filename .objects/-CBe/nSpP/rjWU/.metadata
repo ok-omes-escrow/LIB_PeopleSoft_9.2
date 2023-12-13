@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Edge: Homepage",
+  "Description": "This is the landing page after log in",
+  "Type": "Screen",
+  "Id": "rjWUwx8iXEqLjYnPmbHSIw",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/rjWUwx8iXEqLjYnPmbHSIw",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/nSpPxvg0_kuOWgXwF3AoOA",
+  "Created": "2023-11-10T09:36:45.4483726Z",
+  "Updated": "2023-12-12T13:22:43.1126578Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

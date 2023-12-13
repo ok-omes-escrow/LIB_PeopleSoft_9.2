@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Pay Cycle Manager",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "o8IQQXu89U6YmW01GuoJPQ",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/o8IQQXu89U6YmW01GuoJPQ",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/Irjpr5FHCUaOHkgNCFJ3dw",
+  "Created": "2023-12-12T11:53:26.4425938Z",
+  "Updated": "2023-12-12T11:53:26.4425938Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
