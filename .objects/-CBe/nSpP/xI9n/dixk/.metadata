@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Hold Reason",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "dixkd1fT402mKcvoQwhUHA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/dixkd1fT402mKcvoQwhUHA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2023-12-13T09:09:34.4479809Z",
+  "Updated": "2023-12-13T09:09:34.4479809Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
