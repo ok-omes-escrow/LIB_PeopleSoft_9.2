@@ -39,8 +39,8 @@
       "DataSourceItems": null
     },
     {
-      "Name": "in_str_PeoplesoftURL",
-      "DisplayName": "in_str_PeoplesoftURL",
+      "Name": "in_strPeoplesoftURL",
+      "DisplayName": "in_strPeoplesoftURL",
       "Category": null,
       "Tooltip": null,
       "Placeholder": null,
