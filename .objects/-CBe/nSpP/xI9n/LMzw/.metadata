@@ -6,8 +6,11 @@
   "Reference": "ao86_PT9xkmS2L7lE3WumQ/LMzwx79DY0uUExrph0f_qg",
   "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ",
   "Created": "2023-12-07T14:43:25.6605785Z",
-  "Updated": "2023-12-07T14:43:25.6605785Z",
+  "Updated": "2024-01-02T08:59:40.0474479Z",
   "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
     "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
   ]
 }
