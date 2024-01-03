@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1488,2583</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>642,2650.6666666666665</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Log_Out_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -93,22 +93,20 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Log_Out" sap:VirtualizedContainerService.HintSize="652,2518" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow logs you out of Peoplesoft and handles the data save popup if that appears while logging out.&#xD;&#xA;This workflow logs out of Peoplesoft Application&#xA;The actions are:-&#xA;Click Actions button&#xA;Click Signout&#xA;Click No in pop-up" DisplayName="Log_Out" sap:VirtualizedContainerService.HintSize="652,2586" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Default="10" Name="intLongTimeout" />
-      <Variable x:TypeArguments="x:Int32" Default="5" Name="intMediumTimeout" />
       <Variable x:TypeArguments="x:Int32" Default="3" Name="intShortTimeout" />
-      <Variable x:TypeArguments="x:Int32" Default="30" Name="intVeryLongTimeout" />
-      <Variable x:TypeArguments="x:Int32" Default="1" Name="intVeryShortTimeout" />
       <Variable x:TypeArguments="x:String" Name="strURL" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="590,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Logging out of Peoplesoft...&quot;]" />
-    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="590,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="590,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Logging out of Peoplesoft...&quot;]" />
+    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="590,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strURL]</OutArgument>
       </Assign.To>
@@ -116,19 +114,19 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="This workflow logs out of Peoplesoft Application&#xA;The actions are:-&#xA;Click Actions button&#xA;Click Signout&#xA;Click No in pop-up" AttachMode="ByInstance" CloseMode="Always" DisplayName="Edge: Oracle Dynamic Page" sap:VirtualizedContainerService.HintSize="590,1923" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Edge: Oracle Dynamic Page" sap:VirtualizedContainerService.HintSize="590,1868.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,1619" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,1649.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Actions Button'" sap:VirtualizedContainerService.HintSize="494,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Actions Button'" sap:VirtualizedContainerService.HintSize="494,197.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL" ContentHash="TbioHlk860ORX_6CaoOmLA" DesignTimeRectangle="1798, 86, 34, 33" DesignTimeScaleFactor="1" FriendlyName="'Actions Button'" FullSelectorArgument="&lt;webctrl tag='A' aaname='Actions' parentid='actionListIcon' uipath-html-title='Actions' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' aaname='Actions' parentid='actionListIcon' uipath-html-title='Actions' type='' class='PSHYPERLINK headerbutton' /&gt;" Guid="23af953e-fbbf-43d3-be44-6c513ae426bf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAlCAYAAAAuqZsAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEHSURBVFhH7Za7agJREIZ9EWsfYMVO7LxEkEgaMXmQYLEacGMRfSAxuka8ofgaRuMF4rJpJ8g5hcI0/54VFpkfvmr+4uOcKSYWT1gURUQMRcRQRAwlFLFC+ZkaTpvyj1V2HgRjsbrzQZd5tR22h2Istj8ctZLK+nvD9lCMxX52e62kstnu2B6KsZjdvP7KWqPF9lBCWf7i0wu9vXcoW6qw8yCEInYL7lcslXmg3mBEvyePuv0hJdM5todiLDZfrPTaq7ijCdtDMRbz/T+tpHLyPLaHYiw2nS+1ksrXeMb2UELZsfP3nV+q++lGZ8duxX2LydmDIGcPipw9UUHEUEQMRcRQRAzDon/JopXuSQiwqgAAAABJRU5ErkJggg==" InformativeScreenshot="459113f841791d95ee05dca45026171c.png" Reference="ao86_PT9xkmS2L7lE3WumQ/Dmrzjwpbz0OSZhLIq1iwlQ" ScopeSelectorArgument="&lt;html app='msedge.exe' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -153,7 +151,7 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Sign Out'" sap:VirtualizedContainerService.HintSize="494,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DisplayName="Click 'Sign Out'" sap:VirtualizedContainerService.HintSize="494,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL" ContentHash="0tV-JZdGfU27ZE-oEsnrww" DesignTimeRectangle="1575, 311, 256, 44" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Sign Out'" FullSelectorArgument="&lt;webctrl aaname='Sign Out' aria-role='menuitem' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sign Out' aria-role='menuitem' tag='A' type='' class='PSHYPERLINK' check:text='Sign Out' /&gt;" Guid="e91ad229-0948-428d-ad59-a13f372ed20a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQQAAAAwCAYAAAD3lAQFAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPTSURBVHhe7d1NTltXGIDhs5Duo5vIvIsoK0gGMMkGMqUZRjAqGBA/4l8gEBWiQiRITqYRHVWVOmgiZXDb1+E7OToyiSG+LvJ9H+kIYxvfy+B7fTDBSUtLS83MzEwjqbtoAC0wCJIMgqQvDIKkzCBIygyCpMwgSMoMgqTMIEjKDIKkzCBIygyCpMwgSMoMgqTMIEjKDIKkzCBIyloPwj8fPzUzL/abH376JS8+5/rw/NVvg9U2jlGex5NnvebPvz/c3jq6d+//etDXSY9dq0FgaBi6hb3+7TWfMZgPHcaHiPOoQ3T65o9BGPg4Ku47yXOXJikHYXl5eexBuGt4YkDvM4jf42s7EM7hx58Xm7f/PeuPwiBomtEAWtBaEEYZtnpg2VGU2/oXv/6en925jcsv11+PtPXn2E+e9u48h/iRJnYxw+IR1/H9xDFZkwqaNCmtBqF+/aAetFAOYR2RGMIyCHweAxzHuOux+fpvPaNHZHis8lxCfX7uEDStWg1CiKEuVww0YuDqZ+vAbWUQ6oEsB7rGse+6LRgE6bOJBKEUQ08UGC7EwDFkDFtcH8qBHTb83wqCOwRpNDkIvV5vIkFARCGGLAaujSCM8zUEGARNMxpAC9LKyspYg1APfa0csrhcD2fgthj4+wYB5bFqDHj5mkV93/r7MAiaZjSAFow9CGB46tcLUD9rl0NYD2g8xvcEIXYe9X3isfkYeKxhx4/zq89dmiY5CKurq2MPAmIYGapY9TNsGQQwlOV9h/3a8T5BCOXjDjuPwLnEfeLc4vw4BsfiNh5PmiY0gBaktbW1VoIwDgxeGQxJ7aABtOBRBCGefcvhZ2vOFr7c1ktqRw7C+vr6o9ghDPsRwxhIk0EDaEHa2Nh4FEGQ9P+hAbQgbW5uGgSp42gALUhbW1sGQeo4GkAL0vb2tkGQOo4G0IK0u7trEKSOowG0IO3v7xsEqeNoAC1Ih4eHBkHqOBpAC9LR0ZFBkDqOBtCCdHx8bBCkjqMBtCCdnp4aBKnjaAAtSGdnZwZB6jgaQAvS+fm5QZA6jgbQgnRxcWEQpI6jAbQgXV5eNrOzs7dXS+qam5ubZm5urqEF6erqqllYWLi9SVKXEIP5+flmcXGxoQXp+vp6cIEosFNg6+ByubqxmHlmnwbQgtTv9wcXuIItAz9H8OICrzienJwMfjfJP1g4ODho9vb2mp2dncEfQfCXUfy5JG+qwOLdVli8Lxtv1sjibZ15r/dy8R9Kulyu0VY9P8xUzBezFnMXc8hMMpvMKLPKzDK7zDCzzEwz28w4s87MRwz6/X7zL2fhhqAkN4aIAAAAAElFTkSuQmCC" InformativeScreenshot="96fa2d2b1718ff399a58c9168f3bb37e.png" Reference="ao86_PT9xkmS2L7lE3WumQ/vmVVYk4xfEWS87rF6wgBkA" ScopeSelectorArgument="&lt;html app='msedge.exe' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -164,17 +162,18 @@
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="494,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clicked Sign out&quot;]" />
-            <uix:NCheckState DisplayName="Check App State 'Save Changes Pop up'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,891" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Timeout="[intShortTimeout]" Version="V3">
+            <ui:LogMessage DisplayName="Log Message : Signout" sap:VirtualizedContainerService.HintSize="494,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clicked Sign out&quot;]" />
+            <uix:NCheckState DisplayName="Check App State 'Save Changes Pop up'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,909.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Timeout="[intShortTimeout]" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,674" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,688" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Save changes Pop-up appeared...&quot;]" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'No'" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message: Popup Appeared" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Save changes Pop-up appeared...&quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'No'" sap:VirtualizedContainerService.HintSize="388,197.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL" ContentHash="-fbZKlKQv0qsK9pf0hEKgg" DesignTimeRectangle="969, 573, 70, 16" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'No'" FullSelectorArgument="&lt;webctrl id='ptpopupmsgbtn2' aaname='No' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptpopupmsgbtn2' aaname='No' tag='INPUT' type='button' class='PSPUSHBUTTONTBOK' check:text='No' /&gt;" Guid="4b07c75e-35c8-4f70-993d-ce4c085b676d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAUCAYAAAAqVKv2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEGSURBVFhH7ZYxCsJAEEU9jAfwANp7Ao+hpaWlrXgCew+gN1AE0cLKSrAQBEFIIYKw+uIODiHgVrtK5kEgzMw2j/mb1JwRhIkKxEQFYqICiS5qPD+6em/hZtuLr3yg1hqs3el695XfIZmozmjnstvDV9+YKAWimi8Zjf4qf9eYKAVy2Kbp8pzL2hwy3ykX1Z3s8w3kKc7HJJkoYocEHUEtiho93edsKllJRSEEMRJBLQoZRFRLEXkyH5OkogA5siVaVFkMgfNsYmySiwKJIPfWN1HMVlYU28RWtYdbi55QJgqo82UTUSJFzzJTyctcI2KKcSNmlfw9+FdMVCAmKhATFYiJCsK5J0Fym5bPvfWHAAAAAElFTkSuQmCC" InformativeScreenshot="32ea0dab743a07495e058b2a7014092e.png" Reference="ao86_PT9xkmS2L7lE3WumQ/Z1FFPA43V0ukOzDXD0-lxw" ScopeSelectorArgument="&lt;html app='msedge.exe' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -198,11 +197,11 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clicked No on pop-up&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message: Click No" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Clicked No on pop-up&quot;]" />
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,105" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -226,12 +225,7 @@
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="tqA4J5gJ5UqdBumDUROefA" IconBase64="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" InformativeScreenshot="0-qA7QlVSbUO3ejTHTytBfg" Reference="ao86_PT9xkmS2L7lE3WumQ/ad-gUXmG10WnVBLt7IRMeA" Selector="&lt;html app='msedge.exe' /&gt;" Title="Oracle PeopleSoft Sign-in" Url="[strURL]" />
       </uix:NApplicationCard.TargetApp>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="590,141" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Logged out of Peoplesoft successfully&quot;]" />
+    <ui:LogMessage DisplayName="Log Message: Workflow completed" sap:VirtualizedContainerService.HintSize="590,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Logged out of Peoplesoft successfully&quot;]" />
   </Sequence>
 </Activity>
