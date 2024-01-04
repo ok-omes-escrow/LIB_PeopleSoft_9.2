@@ -10,7 +10,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1102,3074.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>857.3333333333334,1069.3333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Refresh_Process_Monitor_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -105,7 +105,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow refreshes Process Monitor page.&#xA;The actions are:-&#xA;Click Clear Button&#xA;Enter User ID &#xA;Enter Duration&#xA;Select Duration Type&#xA;Click Refresh Button&#xD;&#xA;Click View All&#xD;&#xA;&#xD;&#xA;List of Arguments Used:&#xD;&#xA;in_strPeoplesoftURL : This refers to the URL of the Process Monitor page of Peoplesoft where we need to enter all details.&#xD;&#xA;in_intDuration : This refers to the duration we need to see the data for in terms of duration type we mention.&#xD;&#xA;in_strDurationType : This refers to the Duration type we want to select , it can be days, week etc. depending on the requirement.&#xD;&#xA;in_strFilterUserID : This refers to the User ID we need to enter to filter the table contents for that particular user.&#xD;&#xA;in_strNavigationException : This refers to the Exception when the Navigation button to open Menu options is not found on the homepage." DisplayName="Refresh_Process_Monitor" sap:VirtualizedContainerService.HintSize="1112,3010" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow refreshes Process Monitor page.&#xA;The actions are:-&#xA;Click Clear Button&#xA;Enter User ID &#xA;Enter Duration&#xA;Select Duration Type&#xA;Click Refresh Button&#xA;Click View All&#xA;&#xA;List of Arguments Used:&#xA;in_strPeoplesoftURL : This refers to the URL of the Process Monitor page of Peoplesoft where we need to enter all details.&#xA;in_intDuration : This refers to the duration we need to see the data for in terms of duration type we mention.&#xA;in_strDurationType : This refers to the Duration type we want to select , it can be days, week etc. depending on the requirement.&#xA;in_strFilterUserID : This refers to the User ID we need to enter to filter the table contents for that particular user.&#xA;in_strNavigationException : This refers to the Exception when the Navigation button to open Menu options is not found on the homepage." DisplayName="Refresh_Process_Monitor" sap:VirtualizedContainerService.HintSize="496,1004.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="5" Name="intMediumTimeout" />
       <Variable x:TypeArguments="x:String" Name="strURL" />
@@ -116,8 +116,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="1050,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshing Process Monitor...&quot;]" />
-    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="1050,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshing Process Monitor...&quot;]" />
+    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strURL]</OutArgument>
       </Assign.To>
@@ -125,7 +125,7 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="1050,2142.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="434,54" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -254,11 +254,11 @@
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message: Workflow completed" sap:VirtualizedContainerService.HintSize="1050,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshed Process Monitor successfully&quot;]" />
+    <ui:LogMessage DisplayName="Log Message: Workflow completed" sap:VirtualizedContainerService.HintSize="434,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshed Process Monitor successfully&quot;]" />
   </Sequence>
 </Activity>

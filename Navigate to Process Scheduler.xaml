@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>642,2718</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>857.3333333333334,2701.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -98,7 +98,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow navigates to Process Scheduler page.&#xA;The actions are:-&#xA;Click Navigation Icon&#xA;Click Menu&#xA;Click People tools&#xA;Click Process Scheduler&#xA;Click Process Monitor&#xD;&#xA;&#xD;&#xA;List of Arguments Used:&#xD;&#xA;in_strPeoplesoftURL : This refers to the URL of the homepage of Peoplesoft from where we need to navigate to Process Scheduler Page.&#xD;&#xA;i" DisplayName="Navigate to Process Scheduler" sap:VirtualizedContainerService.HintSize="652,2653.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow navigates to Process Scheduler page.&#xA;The actions are:-&#xA;Click Navigation Icon&#xA;Click Menu&#xA;Click People tools&#xA;Click Process Scheduler&#xA;Click Process Monitor&#xA;&#xA;List of Arguments Used:&#xA;in_strPeoplesoftURL : This refers to the URL of the homepage of Peoplesoft from where we need to navigate to Process Scheduler Page.&#xA;i" DisplayName="Navigate to Process Scheduler" sap:VirtualizedContainerService.HintSize="652,2636.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="5" Name="intMediumTimeout" />
       <Variable x:TypeArguments="x:String" Name="strURL" />
@@ -118,7 +118,7 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Homepage" sap:VirtualizedContainerService.HintSize="590,1819.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="9d6bf968-22e4-4482-be51-672948cb3588" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Homepage" sap:VirtualizedContainerService.HintSize="590,1819.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="9d6bf968-22e4-4482-be51-672948cb3588" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
