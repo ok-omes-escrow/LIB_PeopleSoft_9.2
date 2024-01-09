@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Edge: Payment Selection Criteria",
+  "Type": "Screen",
+  "Id": "QYHxe0ZxnkacBkm4UZ34eQ",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/QYHxe0ZxnkacBkm4UZ34eQ",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/nSpPxvg0_kuOWgXwF3AoOA",
+  "Created": "2023-11-24T10:18:19.0042319Z",
+  "Updated": "2023-12-13T12:55:01.2559237Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

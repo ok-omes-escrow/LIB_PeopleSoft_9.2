@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Save Voucher",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "3IkvRoSUDUqONa4FIGMyXA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/3IkvRoSUDUqONa4FIGMyXA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2023-12-07T14:14:26.2881853Z",
+  "Updated": "2023-12-07T14:43:25.6143971Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

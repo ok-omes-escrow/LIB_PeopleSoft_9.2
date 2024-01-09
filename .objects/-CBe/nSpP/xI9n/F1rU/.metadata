@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Return to Search",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "F1rUT_dGUE2neF-KEghPhg",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/F1rUT_dGUE2neF-KEghPhg",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2023-12-07T14:14:26.3359259Z",
+  "Updated": "2023-12-07T14:14:26.3359259Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

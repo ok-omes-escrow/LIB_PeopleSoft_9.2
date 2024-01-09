@@ -1,0 +1,13 @@
+﻿{
+  "Name": "View Log/Trace Pop-Up Label",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "4jhQQTsV1UevO6QGVSO_cw",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/4jhQQTsV1UevO6QGVSO_cw",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/25IJ5NWcEECKlFurS8SKlQ",
+  "Created": "2023-11-21T13:04:06.1608668Z",
+  "Updated": "2023-11-21T13:04:06.1608668Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "Name": "Clear box",
+  "Description": "This button clears the predefined filters",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "fAE-V9kkEEKbrmhCgwZx3Q",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/fAE-V9kkEEKbrmhCgwZx3Q",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/25IJ5NWcEECKlFurS8SKlQ",
+  "Created": "2023-11-15T12:33:47.0491834Z",
+  "Updated": "2023-11-17T10:02:26.6538811Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Next Pay Through Date",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "G0bnalDtHUuBqYIhTx0IDg",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/G0bnalDtHUuBqYIhTx0IDg",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/QYHxe0ZxnkacBkm4UZ34eQ",
+  "Created": "2023-11-27T13:10:48.8315025Z",
+  "Updated": "2023-11-27T13:10:48.8315025Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

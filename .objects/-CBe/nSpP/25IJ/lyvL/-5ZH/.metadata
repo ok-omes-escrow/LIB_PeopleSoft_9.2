@@ -1,0 +1,16 @@
+﻿{
+  "Name": "View Log/Trace Button",
+  "Type": "Element",
+  "TaxonomyType": "Link",
+  "Id": "-5ZHCjbJTUC8l81MM1SV6g",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/-5ZHCjbJTUC8l81MM1SV6g",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/lyvLNqhMO0WxqEO8s_B1nQ",
+  "Created": "2023-11-21T13:04:06.0035482Z",
+  "Updated": "2023-12-07T04:16:01.961352Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

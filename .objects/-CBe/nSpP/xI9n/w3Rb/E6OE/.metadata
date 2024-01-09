@@ -1,0 +1,13 @@
+﻿{
+  "Name": "View 100",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "E6OEWvgaPESfzZlMWPb6bg",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/E6OEWvgaPESfzZlMWPb6bg",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/w3Rb470Xh06Iz-2o_a1KcQ",
+  "Created": "2024-01-02T10:26:18.0444517Z",
+  "Updated": "2024-01-02T10:26:18.0444517Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

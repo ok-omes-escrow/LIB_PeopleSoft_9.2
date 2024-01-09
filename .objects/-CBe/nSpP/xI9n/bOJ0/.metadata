@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Payments",
+  "Type": "Element",
+  "TaxonomyType": "Tab",
+  "Id": "bOJ008EE60ilwbdFuI1svA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/bOJ008EE60ilwbdFuI1svA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2023-12-07T14:14:26.0072656Z",
+  "Updated": "2024-01-02T08:59:40.2500889Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

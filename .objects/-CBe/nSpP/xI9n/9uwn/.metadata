@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Pay Group Input",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "9uwnHAu-UkCVMrapdulOdw",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/9uwnHAu-UkCVMrapdulOdw",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2023-12-07T14:43:25.7103774Z",
+  "Updated": "2023-12-07T14:43:25.7103774Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
