@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_strNavigationException="SE1: The Navigation button was not found in Peoplesoft home page " xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_strPeoplesoftURL" Type="InArgument(x:String)" />
     <x:Property Name="in_strNavigationException" Type="InArgument(x:String)" />
@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>857.3333333333334,2701.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1488,2661</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -98,7 +98,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow navigates to Process Scheduler page.&#xA;The actions are:-&#xA;Click Navigation Icon&#xA;Click Menu&#xA;Click People tools&#xA;Click Process Scheduler&#xA;Click Process Monitor&#xA;&#xA;List of Arguments Used:&#xA;in_strPeoplesoftURL : This refers to the URL of the homepage of Peoplesoft from where we need to navigate to Process Scheduler Page.&#xA;i" DisplayName="Navigate to Process Scheduler" sap:VirtualizedContainerService.HintSize="652,2636.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow navigates to Process Scheduler page.&#xA;The actions are:-&#xA;Click Navigation Icon&#xA;Click Menu&#xA;Click People tools&#xA;Click Process Scheduler&#xA;Click Process Monitor&#xA;&#xA;List of Arguments Used:&#xA;in_strPeoplesoftURL : This refers to the URL of the homepage of Peoplesoft from where we need to navigate to Process Scheduler Page.&#xA;i" DisplayName="Navigate to Process Scheduler" sap:VirtualizedContainerService.HintSize="652,2596" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="5" Name="intMediumTimeout" />
       <Variable x:TypeArguments="x:String" Name="strURL" />
@@ -109,8 +109,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="590,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Navigate to Process Monitor started...&quot;]" />
-    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="590,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="590,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Navigate to Process Monitor started...&quot;]" />
+    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="590,82" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strURL]</OutArgument>
       </Assign.To>
@@ -118,21 +118,21 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Homepage" sap:VirtualizedContainerService.HintSize="590,1819.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="9d6bf968-22e4-4482-be51-672948cb3588" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Homepage" sap:VirtualizedContainerService.HintSize="590,1805" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="9d6bf968-22e4-4482-be51-672948cb3588" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,1600" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,1588" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Navigate Button'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,1484" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="9d6bf968-22e4-4482-be51-672948cb3588" Timeout="[intMediumTimeout]" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Navigate Button'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,1473" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="9d6bf968-22e4-4482-be51-672948cb3588" Timeout="[intMediumTimeout]" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1262.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1256" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="ui:UiElement" Name="elmtNavigationButtonElement" />
                   </Sequence.Variables>
@@ -141,7 +141,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Navigate Button'" sap:VirtualizedContainerService.HintSize="388,197.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" OutUiElement="[elmtNavigationButtonElement]" ScopeIdentifier="9d6bf968-22e4-4482-be51-672948cb3588" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Navigate Button'" sap:VirtualizedContainerService.HintSize="388,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" OutUiElement="[elmtNavigationButtonElement]" ScopeIdentifier="9d6bf968-22e4-4482-be51-672948cb3588" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL?" ContentHash="gWfgR2asn0KOEdInAk3VtQ" DesignTimeRectangle="1844, 84, 35, 35" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'Navigate Button'" FullSelectorArgument="&lt;webctrl id='PT_NAVBAR$IMG' tag='IMG' aaname='NavBar' /&gt;" FuzzySelectorArgument="&lt;webctrl id='PT_NAVBAR$IMG' tag='IMG' aaname='NavBar' type='' class='ps-img' /&gt;" Guid="ef2d30a0-b490-4bd3-bde7-05976077cc59" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAYAAACMo1E1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO8SURBVFhH7Zf5U01hGMf9I34zMoMWSdKi0mpsmaYyFCGkyVJE0iSSkvbSotu0L9LuRk2WhNJo0ERSYxAthhatfnp4nu657jn3zTn3GDPG3GfmM2fO+33Oc77nzHmf9z2LFhuYwr+K3pxc9Obkojcnl//fnNcefwg5ewFiE9LhZNh58Np9iJmnK7LNWTluhaKySpiangZWTE5OQW5hGZjbbmReLwWdzS01soS8onKVhfno6n4FlbVKSM/Og6q6BnjZ06tS5gPHWbXE0Mkcvq3Xb/pVtwRITMsGo7UbSMvOLaKx4vJKOl+z3hVSMhTqN/vsRTeYWjnz6okh2ZyBsRX0v31HN+rp7QO7je483ccvEB4/eQp7/Y/zxk3WOcKDR+10HRrU1MSQbK6yRkk3aO/oZOoLscrSCe63PlY/WEZOPjOPhSRzTlu8qPDo2DjdjJXDYn9AMIxPTEBUbBLYumyHubnvVGe1tQszX4gkc3XKRip6KjyKqQvBSVN2o5au0XzTqZkKGlPkl/DyF0KSOfyoh0c+MzUhm9y94d37ATIxOTUNZjauam25mS2NDw6N8K5ZCFFz2FAxrlfVMXVNsAlrxsEjIVo5d1sekbbe2U1LEyJqDjs+RmhENDhs8mDmIE13WiiPC9bDuLrthJiENNLxexTqQkTNRcclUzHsWRiXE9O1ciIvxZPW0HiHjh8GPsEyE2teDvdWMxUFdDwXHc/TWYiaOx+TQMWycgvpGJ+SydMt7DfD7OwcaX39b+m4zdOXl4MkpGaRxjVrfCBhjhBRc4HBYVQs4uIV8PA+AIbm9jz9YVsH6VxERMXxdA5jCwe6HtsKhv+x08w8TUTN4XeCUXK9WksLDo0kDePr6Bh4+hzUyhFSe3O+LWHvZOmaiJpDvnwdhaFh/vTHZWli4hvdCHsZnmvqC6FLW5Jkjmuox09HqMeUt5tpLPlqDi/3d3CTAnc1LF2IJHPYkzDw7a0ws4N9h4NoWdq5N4CZz8LGyQ1mZmepDu5YWDlCJJlDCkoqqHDzvVZqGZqdXwzc0eBOBiMtM5eZw0KyOQR3Fxidz7u0nj4gKBTafn57YZExvPGVa+xoq4RR39DE08TQyRwu6JxBnAxHQ8LVmlLVgHGTgOe4juJqgLMYo7r+ljpXKjqZ48B/Ay4+Dg6BoqCUmixHcXmVSp2PpPRrzDpiyDKH4Ja9tKIGpmdmVBb4gRMmJ69Y8t6NhWxzHEsMLWCH769fwxNnIsF9lx8zV1f+2NzfRG9OLnpzctGbk4cp/ADM/WapZACReQAAAABJRU5ErkJggg==" InformativeScreenshot="7c3b94be13b737566f7cb04867b0f61f.png" Reference="ao86_PT9xkmS2L7lE3WumQ/rIGGyBjDf0qxXz-1vmt5lg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Homepage' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>

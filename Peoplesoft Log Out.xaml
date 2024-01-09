@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>857.3333333333334,2650.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1488,2626</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Log_Out_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -93,7 +93,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow logs you out of Peoplesoft and handles the data save popup if that appears while logging out.&#xA;This workflow logs out of Peoplesoft Application&#xA;The actions are:-&#xA;Click Actions button&#xA;Click Signout&#xA;Click No in pop-up" DisplayName="Log_Out" sap:VirtualizedContainerService.HintSize="652,2586" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow logs you out of Peoplesoft and handles the data save popup if that appears while logging out.&#xA;This workflow logs out of Peoplesoft Application&#xA;The actions are:-&#xA;Click Actions button&#xA;Click Signout&#xA;Click No in pop-up" DisplayName="Log_Out" sap:VirtualizedContainerService.HintSize="652,2561" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="3" Name="intShortTimeout" />
       <Variable x:TypeArguments="x:String" Name="strURL" />
@@ -105,8 +105,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="590,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Logging out of Peoplesoft...&quot;]" />
-    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="590,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="590,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Logging out of Peoplesoft...&quot;]" />
+    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="590,82" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strURL]</OutArgument>
       </Assign.To>
@@ -114,19 +114,19 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Edge: Oracle Dynamic Page" sap:VirtualizedContainerService.HintSize="590,1868.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Edge: Oracle Dynamic Page" sap:VirtualizedContainerService.HintSize="590,1860" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,1649.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="556,1643" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Actions Button'" sap:VirtualizedContainerService.HintSize="494,197.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Actions Button'" sap:VirtualizedContainerService.HintSize="494,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="64dd69dd-3b33-4c10-80bd-6103a852aea2" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL" ContentHash="TbioHlk860ORX_6CaoOmLA" DesignTimeRectangle="1798, 86, 34, 33" DesignTimeScaleFactor="1" FriendlyName="'Actions Button'" FullSelectorArgument="&lt;webctrl tag='A' aaname='Actions' parentid='actionListIcon' uipath-html-title='Actions' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' aaname='Actions' parentid='actionListIcon' uipath-html-title='Actions' type='' class='PSHYPERLINK headerbutton' /&gt;" Guid="23af953e-fbbf-43d3-be44-6c513ae426bf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAlCAYAAAAuqZsAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEHSURBVFhH7Za7agJREIZ9EWsfYMVO7LxEkEgaMXmQYLEacGMRfSAxuka8ofgaRuMF4rJpJ8g5hcI0/54VFpkfvmr+4uOcKSYWT1gURUQMRcRQRAwlFLFC+ZkaTpvyj1V2HgRjsbrzQZd5tR22h2Istj8ctZLK+nvD9lCMxX52e62kstnu2B6KsZjdvP7KWqPF9lBCWf7i0wu9vXcoW6qw8yCEInYL7lcslXmg3mBEvyePuv0hJdM5todiLDZfrPTaq7ijCdtDMRbz/T+tpHLyPLaHYiw2nS+1ksrXeMb2UELZsfP3nV+q++lGZ8duxX2LydmDIGcPipw9UUHEUEQMRcRQRAzDon/JopXuSQiwqgAAAABJRU5ErkJggg==" InformativeScreenshot="459113f841791d95ee05dca45026171c.png" Reference="ao86_PT9xkmS2L7lE3WumQ/Dmrzjwpbz0OSZhLIq1iwlQ" ScopeSelectorArgument="&lt;html app='msedge.exe' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>

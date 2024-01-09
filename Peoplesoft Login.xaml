@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Peoplesoft_Login" this:Peoplesoft_Login.in_strPeoplesoftURL="https://soklfpub-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/?cmd=login&amp;languageCd=ENG&amp;" this:Peoplesoft_Login.in_strUserIDTextboxException="SE1: User ID field was not found in the log in page" this:Peoplesoft_Login.in_strLoginException="SE: Unexpected error encountered while logging into Peoplesoft. Refer to screenshot for error description" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uue="clr-namespace:UiPath.UIAutomationNext.Exceptions;assembly=UiPath.UIAutomationNext" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Peoplesoft_Login" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uue="clr-namespace:UiPath.UIAutomationNext.Exceptions;assembly=UiPath.UIAutomationNext" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_strUsername" Type="InArgument(x:String)" />
     <x:Property Name="in_strPassword" Type="InArgument(ss:SecureString)" />
@@ -10,7 +10,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF0000014CeyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiVGhpcyB3b3JrZmxvdyBpbnRlcmFjdHMgd2l0aCBMb2dpbiBwYWdlIG9mIFBlb3BsZXNvZnRcbkFjdGlvbnMgSW5jbHVkZSA6LVxuRmlsbCBVc2VyIE5hbWVcbkZpbGwgUGFzc3dvcmRcbkNsaWNrIFNpZ24gaW5cbkNoZWNrIGlmIGVycm9yIGVuY291bnRlcmVkIiwiPFZlcnNpb24+a19fQmFja2luZ0ZpZWxkIjoxfQ==</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1102,2150.6666666666665</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1488,2110</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Peoplesoft_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,7 +112,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow interacts with Login page of Peoplesoft&#xA;Actions Include :-&#xA;Fill User Name&#xA;Fill Password&#xA;Click Sign in&#xA;Check if error encountered&#xA;&#xA;List of Arguments Used:&#xA;in_strUsername : Username for Peoplesoft login.&#xA;in_strPassword : Password for Peoplesoft login as secure string.&#xA;in_strPeoplesoftURL : URL for the login page for Peoplesoft.&#xA;in_strUserIDTextboxException : This exception refers to the User ID textbox on login page which is being checked to see if login page is available or not.&#xA;in_strLoginException : This exception refers to the unexpected exception when there is an error after clicking sign in button but no error message is displayed on screen." DisplayName="Peoplesoft_Login" sap:VirtualizedContainerService.HintSize="1112,2086" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow interacts with Login page of Peoplesoft&#xA;Actions Include :-&#xA;Fill User Name&#xA;Fill Password&#xA;Click Sign in&#xA;Check if error encountered&#xA;&#xA;List of Arguments Used:&#xA;in_strUsername : Username for Peoplesoft login.&#xA;in_strPassword : Password for Peoplesoft login as secure string.&#xA;in_strPeoplesoftURL : URL for the login page for Peoplesoft.&#xA;in_strUserIDTextboxException : This exception refers to the User ID textbox on login page which is being checked to see if login page is available or not.&#xA;in_strLoginException : This exception refers to the unexpected exception when there is an error after clicking sign in button but no error message is displayed on screen." DisplayName="Peoplesoft_Login" sap:VirtualizedContainerService.HintSize="1112,2045" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="3" Name="intShortTimeout" />
       <Variable x:TypeArguments="x:Int32" Default="10" Name="intLongTimeout" />
@@ -125,8 +125,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="1050,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log in to Peoplesoft started...&quot;]" />
-    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="1050,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log in to Peoplesoft started...&quot;]" />
+    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="1050,82" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strURL]</OutArgument>
       </Assign.To>
@@ -134,28 +134,28 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Oracle PeopleSoft Sign-in" sap:VirtualizedContainerService.HintSize="1050,1252" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Oracle PeopleSoft Sign-in" sap:VirtualizedContainerService.HintSize="1050,1239" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1032.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1022" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'User ID Field'" sap:VirtualizedContainerService.HintSize="954,916.6666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Timeout="[intLongTimeout]" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'User ID Field'" sap:VirtualizedContainerService.HintSize="954,907" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Timeout="[intLongTimeout]" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears: Login Page" sap:VirtualizedContainerService.HintSize="450,695.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears: Login Page" sap:VirtualizedContainerService.HintSize="450,690" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Text="[in_strUsername]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Text="[in_strUsername]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/?cmd=login&amp;languageCd=ENG&amp;" ContentHash="waD1HZqulEiy0h8Vc7b0_A" DesignTimeRectangle="652, 435, 592, 37" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'User ID Field'" FullSelectorArgument="&lt;webctrl id='userid' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userid' tag='INPUT' type='text' class='' aaname='User ID' /&gt;" Guid="aadd0a01-cd8f-43ad-b397-4ad8aa6d6c6b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAlQAAAApCAYAAADzu7cfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFtSURBVHhe7dk7bsJAGIXRrD5lykh0ULliExQUbAVogH6i38ITQwJ53PYc6Rb2eAGfxi8NAICIoAIACN0E1el8aZvtri2WQ3t9ezczMzOz2aqRqpWqmeZ6UNXBaliPH+0Px+tbAAAm1UjVStVM86jqQVWHNQAAnrvvph5UdYXlZgoA4GfVTNVOkx5U9V8QAIDfmbeToAIA+AdBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAAKFvg2qxHNr+cLw+AQDwSDVTtdOkB9VmuxsHAMBz993Ug+p0vrTVsB4P3VQBAHxVjVStVM1U7TTpQVXqoD6qK6z6L2hmZmZmn6tGqlaax1S5CSoAAP6qtQ9sPfNI8wedYQAAAABJRU5ErkJggg==" InformativeScreenshot="ed88a515bf9ffa24023688db4353fd3f.png" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/r-KEc0yk4kWSFQgRsx5i7A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Oracle PeopleSoft Sign-in' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -302,14 +302,14 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear: Login Page" sap:VirtualizedContainerService.HintSize="450,395.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear: Login Page" sap:VirtualizedContainerService.HintSize="450,390" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message: Login Page Not found" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Peoplesoft login page did not load in the specified wait time&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message: Login Page Not found" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Peoplesoft login page did not load in the specified wait time&quot;]" />
                   <Throw DisplayName="Throw SE1" Exception="[new System.Exception(in_strUserIDTextboxException)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
