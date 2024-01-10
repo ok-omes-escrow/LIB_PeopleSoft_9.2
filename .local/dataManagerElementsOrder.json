@@ -36,6 +36,20 @@
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtTableExtract&Sequence_1",
+        "Counter&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "strServerNameRow&Sequence_1",
+        "strURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
     }
   ]
 }
