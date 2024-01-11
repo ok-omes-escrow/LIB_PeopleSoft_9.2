@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Next Records Arrow Button",
+  "Type": "Element",
+  "TaxonomyType": "None",
+  "Id": "D43_4a5x9EuTZTacUAlVrA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/D43_4a5x9EuTZTacUAlVrA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/SdXzF6BJik2bgUVe2Kvyvg",
+  "Created": "2024-01-11T21:17:11.449724Z",
+  "Updated": "2024-01-11T21:17:11.449724Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
