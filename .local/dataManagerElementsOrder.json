@@ -13,9 +13,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "intShortTimeout&Sequence_1",
-        "intVeryShortTimeout&Sequence_1",
         "intMediumTimeout&Sequence_1",
-        "intLongTimeout&Sequence_1",
         "intVeryLongTimeout&Sequence_1",
         "strViewLogTraceWindowCounter&Sequence_1",
         "strProcessDetailWindowCounter&Sequence_1",
@@ -24,8 +22,7 @@
         "strElementClass&Sequence_2",
         "strElementControlID&Sequence_2",
         "strInstanceElementIndex&Sequence_2",
-        "finfoDownloadedFile&Sequence_4",
-        "dtFIleInfoTable&Sequence_4"
+        "finfoDownloadedFile&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [
         "in_strProcessInstance",
@@ -48,6 +45,73 @@
         "strURL&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Extract File Info.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_FileInfoTable&Sequence_1",
+        "dt_FilteredTable&Sequence_1",
+        "strURL&Sequence_1",
+        "ienumRows&Sequence_8"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_strFileName",
+        "in_arrFileType",
+        "in_strPopupWindowCounter",
+        "in_strPeoplesoftURL"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Peoplesoft Log Out.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intShortTimeout&Sequence_1",
+        "strURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strPeoplesoftURL"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Peoplesoft Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intShortTimeout&Sequence_1",
+        "intLongTimeout&Sequence_1",
+        "strURL&Sequence_1",
+        "strLoginErrorDescription&Sequence_9"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strUsername",
+        "in_strPassword",
+        "in_strPeoplesoftURL",
+        "in_strUserIDTextboxException",
+        "in_strLoginException"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Refresh Process Monitor.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intMediumTimeout&Sequence_1",
+        "strURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_intDuration",
+        "in_strFilterUserID",
+        "in_strDurationType",
+        "in_strPeoplesoftURL",
+        "in_strRefreshButtonException"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }

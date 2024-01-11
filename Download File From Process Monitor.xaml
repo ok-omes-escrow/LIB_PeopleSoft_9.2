@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Download_File_From_Process_Monitor" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Download_File_From_Process_Monitor" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_strProcessInstance" Type="InArgument(x:String)" />
     <x:Property Name="in_strPeoplesoftURL" Type="InArgument(x:String)" />
@@ -10,7 +10,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1488,5513</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1488,4869</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Download_File_From_Process_Monitor_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,12 +109,10 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow downloads a specific file from a process instance number&#xA;Click on Process Instance Details&#xA;Click on View log/Trace&#xA;Identify the file to be downloaded&#xA;Confirm that the file has been downloaded&#xA;Close the pop-up" DisplayName="Download_File_From_Process_Monitor" sap:VirtualizedContainerService.HintSize="820,5448" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow downloads a specific file from a process instance number&#xA;Click on Process Instance Details&#xA;Click on View log/Trace&#xA;Identify the file to be downloaded&#xA;Confirm that the file has been downloaded&#xA;Close the pop-up" DisplayName="Download_File_From_Process_Monitor" sap:VirtualizedContainerService.HintSize="820,4764" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="3" Name="intShortTimeout" />
-      <Variable x:TypeArguments="x:Int32" Default="1" Name="intVeryShortTimeout" />
       <Variable x:TypeArguments="x:Int32" Default="5" Name="intMediumTimeout" />
-      <Variable x:TypeArguments="x:Int32" Default="10" Name="intLongTimeout" />
       <Variable x:TypeArguments="x:Int32" Default="30" Name="intVeryLongTimeout" />
       <Variable x:TypeArguments="x:String" Name="strViewLogTraceWindowCounter" />
       <Variable x:TypeArguments="x:String" Name="strProcessDetailWindowCounter" />
@@ -131,7 +129,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="758,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Download File from Process Monitor started...&quot;]" />
+    <ui:LogMessage DisplayName="Log Message Start Download file workflow" sap:VirtualizedContainerService.HintSize="758,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Download File from Process Monitor started...&quot;]" />
     <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="758,82" sap2010:WorkflowViewState.IdRef="Assign_9">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strURL]</OutArgument>
@@ -140,13 +138,13 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="758,4751" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4b44dd36-423a-4c08-80e3-fda7afee44ee" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="758,4067" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4b44dd36-423a-4c08-80e3-fda7afee44ee" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="724,4534" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Download file" sap:VirtualizedContainerService.HintSize="724,3850" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strElementClass" />
               <Variable x:TypeArguments="x:String" Name="strElementControlID" />
@@ -213,19 +211,18 @@
                 </uix:TargetAnchorable>
               </uix:NGetAttributeGeneric.Target>
             </uix:NGetAttributeGeneric>
-            <If Condition="[strElementClass.ToLower.Trim.Contains(&quot;disabled&quot;)=false]" sap:VirtualizedContainerService.HintSize="662,3215" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[strElementClass.ToLower.Trim.Contains(&quot;disabled&quot;)=false]" DisplayName="If  Element class is disabled" sap:VirtualizedContainerService.HintSize="662,2531" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="628,3033" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="628,2349" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="si:FileInfo" Name="finfoDownloadedFile" />
-                    <Variable x:TypeArguments="sd:DataTable" Name="dtFIleInfoTable" />
                   </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[io_intPopupWindowCounter.ToString&lt;&gt;&quot;&quot;]" sap:VirtualizedContainerService.HintSize="586,622" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[io_intPopupWindowCounter.ToString&lt;&gt;&quot;&quot;]" DisplayName="If Pop up window variable is nothing" sap:VirtualizedContainerService.HintSize="586,402" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="465,220" sap2010:WorkflowViewState.IdRef="Sequence_6">
                         <sap:WorkflowViewStateService.ViewState>
@@ -233,7 +230,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="423,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                        <ui:MultipleAssign DisplayName="Multiple Assign - Window Counters" sap:VirtualizedContainerService.HintSize="423,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                           <ui:MultipleAssign.AssignOperations>
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -264,7 +261,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="423,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                        <ui:MultipleAssign DisplayName="Multiple Assign - For Element class" sap:VirtualizedContainerService.HintSize="423,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                           <ui:MultipleAssign.AssignOperations>
                             <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -323,19 +320,19 @@
                       <InArgument x:TypeArguments="x:String" x:Key="in_strPeoplesoftURL">[in_strPeoplesoftURL]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
-                  <If Condition="[strDownloadFileName.Trim&lt;&gt;&quot;&quot;]" DisplayName="If strDownloadFileName.Trim&lt;&gt;&quot;&quot;" sap:VirtualizedContainerService.HintSize="586,1542" sap2010:WorkflowViewState.IdRef="If_4">
+                  <If Condition="[strDownloadFileName.Trim&lt;&gt;&quot;&quot;]" DisplayName="If strDownloadFileName.Trim&lt;&gt;&quot;&quot;" sap:VirtualizedContainerService.HintSize="586,1078" sap2010:WorkflowViewState.IdRef="If_4">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="552,1129" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence sap:VirtualizedContainerService.HintSize="552,896" sap2010:WorkflowViewState.IdRef="Sequence_10">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;File name extracted is &quot; + strDownloadFileName]" />
-                        <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[new TimeSpan(00,00,Cint(intMediumTimeout))]">
+                        <ui:LogMessage DisplayName="Log Message - File name extracted" sap:VirtualizedContainerService.HintSize="510,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;File name extracted is &quot; + strDownloadFileName]" />
+                        <ui:RetryScope DisplayName="Retry Scope - Check if file downloaded" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="[new TimeSpan(00,00,Cint(intMediumTimeout))]">
                           <ui:RetryScope.ActivityBody>
                             <ActivityAction>
-                              <ui:GetLastDownloadedFile FileResource="{x:Null}" DisplayName="Wait for Download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[finfoDownloadedFile]" sap:VirtualizedContainerService.HintSize="484,707" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" IgnoreFiles="tmp" Timeout="[intVeryLongTimeout]">
+                              <ui:GetLastDownloadedFile FileResource="{x:Null}" DisplayName="Wait for Download - Query file download" DownloadFolder="[System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" File="[finfoDownloadedFile]" sap:VirtualizedContainerService.HintSize="484,707" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_1" IgnoreFiles="tmp" Timeout="[intVeryLongTimeout]">
                                 <ui:GetLastDownloadedFile.Body>
                                   <ActivityAction>
                                     <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,451" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -355,7 +352,7 @@
                                           </uix:TargetAnchorable>
                                         </uix:NClick.Target>
                                       </uix:NClick>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;File hyperlink clicked. Waiting for download.&quot;]" />
+                                      <ui:LogMessage DisplayName="Log Message - Clicked on Hyperlink" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;File hyperlink clicked. Waiting for download.&quot;]" />
                                     </Sequence>
                                   </ActivityAction>
                                 </ui:GetLastDownloadedFile.Body>
@@ -370,7 +367,7 @@
                           </ui:RetryScope.ActivityBody>
                           <ui:RetryScope.Condition>
                             <ActivityFunc x:TypeArguments="x:Boolean">
-                              <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Check True" Expression="[Not isNothing(finfoDownloadedFile )]" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
+                              <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Check True - File has been downloaded" Expression="[Not isNothing(finfoDownloadedFile )]" sap:VirtualizedContainerService.HintSize="334,129" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
                             </ActivityFunc>
                           </ui:RetryScope.Condition>
                           <sap:WorkflowViewStateService.ViewState>
@@ -380,7 +377,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:RetryScope>
-                        <If Condition="[Not isNothing(finfoDownloadedFile )]" DisplayName="If Not isNothing(finfoDownloadedFile )" sap:VirtualizedContainerService.HintSize="510,766" sap2010:WorkflowViewState.IdRef="If_3">
+                        <If Condition="[Not isNothing(finfoDownloadedFile )]" DisplayName="If Not isNothing(finfoDownloadedFile )" sap:VirtualizedContainerService.HintSize="510,533" sap2010:WorkflowViewState.IdRef="If_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -388,7 +385,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="476,353" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,351" sap2010:WorkflowViewState.IdRef="Sequence_8">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -402,30 +399,30 @@
                                   <InArgument x:TypeArguments="x:String">[strDownloadFileName]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;File downloaded&quot;]" />
+                              <ui:LogMessage DisplayName="Log Message - File Downloaded" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;File downloaded&quot;]" />
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="376,231" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_9">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;File download was unsuccessful&quot;]" />
+                              <ui:LogMessage DisplayName="Log Message - File Download Unsuccessful" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;File download was unsuccessful&quot;]" />
                             </Sequence>
                           </If.Else>
                         </If>
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,231" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;No file available for download&quot;]" />
+                        <ui:LogMessage DisplayName="Log Message - File unavailable for download" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;No file available for download&quot;]" />
                       </Sequence>
                     </If.Else>
                   </If>
@@ -453,7 +450,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <Assign DisplayName="Assign io_intPopupWindowCounter" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign DisplayName="Assign io_intPopupWindowCounter + 1" sap:VirtualizedContainerService.HintSize="586,82" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[io_intPopupWindowCounter]</OutArgument>
                     </Assign.To>
@@ -512,6 +509,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="758,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Download File from Process Monitor ended successfully&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - Download file ended" sap:VirtualizedContainerService.HintSize="758,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Download File from Process Monitor ended successfully&quot;]" />
   </Sequence>
 </Activity>

@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1488,2725</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1488,2595</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Extract_File_Info_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -109,7 +109,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This work flow loops through the list of files in the View Log/Trace window and outputs the name of the file that needs to be downloaded&#xA;&#xA;The criteria of the file to be downloaded is determined by the file type that is passed as a string array" DisplayName="Extract_File_Info" sap:VirtualizedContainerService.HintSize="724,2660" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This work flow loops through the list of files in the View Log/Trace window and outputs the name of the file that needs to be downloaded&#xA;&#xA;The criteria of the file to be downloaded is determined by the file type that is passed as a string array" DisplayName="Extract_File_Info" sap:VirtualizedContainerService.HintSize="724,2490" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt_FileInfoTable" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt_FilteredTable" />
@@ -242,7 +242,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <If Condition="[dt_FilteredTable.RowCount&gt;0]" DisplayName="If dtFilteredTable.RowCount&gt;0" sap:VirtualizedContainerService.HintSize="662,522" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[dt_FilteredTable.RowCount&gt;0]" DisplayName="If dtFilteredTable.RowCount&gt;0" sap:VirtualizedContainerService.HintSize="662,352" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
@@ -261,13 +261,13 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence sap:VirtualizedContainerService.HintSize="476,169" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign out_strFileName as blank" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign DisplayName="Assign out_strFileName as blank" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[out_strFileName]</OutArgument>
             </Assign.To>
