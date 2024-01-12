@@ -10,7 +10,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF0000014CeyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjoiVGhpcyB3b3JrZmxvdyBpbnRlcmFjdHMgd2l0aCBMb2dpbiBwYWdlIG9mIFBlb3BsZXNvZnRcbkFjdGlvbnMgSW5jbHVkZSA6LVxuRmlsbCBVc2VyIE5hbWVcbkZpbGwgUGFzc3dvcmRcbkNsaWNrIFNpZ24gaW5cbkNoZWNrIGlmIGVycm9yIGVuY291bnRlcmVkIiwiPFZlcnNpb24+a19fQmFja2luZ0ZpZWxkIjoxfQ==</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1488,2104</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1730,3351</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Peoplesoft_Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -112,7 +112,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow interacts with Login page of Peoplesoft&#xA;Actions Include :-&#xA;Fill User Name&#xA;Fill Password&#xA;Click Sign in&#xA;Check if error encountered&#xA;&#xA;List of Arguments Used:&#xA;in_strUsername : Username for Peoplesoft login.&#xA;in_strPassword : Password for Peoplesoft login as secure string.&#xA;in_strPeoplesoftURL : URL for the login page for Peoplesoft.&#xA;in_strUserIDTextboxException : This exception refers to the User ID textbox on login page which is being checked to see if login page is available or not.&#xA;in_strLoginException : This exception refers to the unexpected exception when there is an error after clicking sign in button but no error message is displayed on screen." DisplayName="Peoplesoft_Login" sap:VirtualizedContainerService.HintSize="1112,2039" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow interacts with Login page of Peoplesoft&#xA;Actions Include :-&#xA;Fill User Name&#xA;Fill Password&#xA;Click Sign in&#xA;Check if error encountered&#xA;&#xA;List of Arguments Used:&#xA;in_strUsername : Username for Peoplesoft login.&#xA;in_strPassword : Password for Peoplesoft login as secure string.&#xA;in_strPeoplesoftURL : URL for the login page for Peoplesoft.&#xA;in_strUserIDTextboxException : This exception refers to the User ID textbox on login page which is being checked to see if login page is available or not.&#xA;in_strLoginException : This exception refers to the unexpected exception when there is an error after clicking sign in button but no error message is displayed on screen." DisplayName="Peoplesoft_Login" sap:VirtualizedContainerService.HintSize="1740,3286" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="3" Name="intShortTimeout" />
       <Variable x:TypeArguments="x:Int32" Default="10" Name="intLongTimeout" />
@@ -125,8 +125,8 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log in to Peoplesoft started...&quot;]" />
-    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="1050,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="1678,141" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log in to Peoplesoft started...&quot;]" />
+    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="1678,82" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strURL]</OutArgument>
       </Assign.To>
@@ -134,28 +134,28 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Oracle PeopleSoft Sign-in" sap:VirtualizedContainerService.HintSize="1050,1237" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge: Oracle PeopleSoft Sign-in" sap:VirtualizedContainerService.HintSize="1678,2484" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1020" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1644,2267" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'User ID Field'" sap:VirtualizedContainerService.HintSize="954,905" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Timeout="[intLongTimeout]" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'User ID Field'" sap:VirtualizedContainerService.HintSize="1582,2152" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Timeout="[intLongTimeout]" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears: Login Page" sap:VirtualizedContainerService.HintSize="450,688" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears: Login Page" sap:VirtualizedContainerService.HintSize="1078,1935" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Text="[in_strUsername]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1016,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Text="[in_strUsername]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/?cmd=login&amp;languageCd=ENG&amp;" ContentHash="waD1HZqulEiy0h8Vc7b0_A" DesignTimeRectangle="652, 435, 592, 37" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'User ID Field'" FullSelectorArgument="&lt;webctrl id='userid' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userid' tag='INPUT' type='text' class='' aaname='User ID' /&gt;" Guid="aadd0a01-cd8f-43ad-b397-4ad8aa6d6c6b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAlQAAAApCAYAAADzu7cfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFtSURBVHhe7dk7bsJAGIXRrD5lykh0ULliExQUbAVogH6i38ITQwJ53PYc6Rb2eAGfxi8NAICIoAIACN0E1el8aZvtri2WQ3t9ezczMzOz2aqRqpWqmeZ6UNXBaliPH+0Px+tbAAAm1UjVStVM86jqQVWHNQAAnrvvph5UdYXlZgoA4GfVTNVOkx5U9V8QAIDfmbeToAIA+AdBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAAKFvg2qxHNr+cLw+AQDwSDVTtdOkB9VmuxsHAMBz993Ug+p0vrTVsB4P3VQBAHxVjVStVM1U7TTpQVXqoD6qK6z6L2hmZmZmn6tGqlaax1S5CSoAAP6qtQ9sPfNI8wedYQAAAABJRU5ErkJggg==" InformativeScreenshot="ed88a515bf9ffa24023688db4353fd3f.png" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/r-KEc0yk4kWSFQgRsx5i7A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Oracle PeopleSoft Sign-in' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -166,7 +166,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Password Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" SecureText="[in_strPassword]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Private: Type Into 'Password Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1016,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" SecureText="[in_strPassword]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/?cmd=login&amp;languageCd=ENG&amp;" ContentHash="QInyE7pKlkeixbxbPmGmHg" DesignTimeRectangle="652, 518, 592, 37" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'Password Field'" FullSelectorArgument="&lt;webctrl id='pwd' tag='INPUT' aaname='Password' /&gt;" FuzzySelectorArgument="&lt;webctrl id='pwd' tag='INPUT' aaname='Password' type='password' class='' /&gt;" Guid="1370d2f9-c3a1-4463-997b-5d036c8a9569" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAlQAAAApCAYAAADzu7cfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFtSURBVHhe7dk7bsJAGIXRrD5lykh0ULliExQUbAVogH6i38ITQwJ53PYc6Rb2eAGfxi8NAICIoAIACN0E1el8aZvtri2WQ3t9ezczMzOz2aqRqpWqmeZ6UNXBaliPH+0Px+tbAAAm1UjVStVM86jqQVWHNQAAnrvvph5UdYXlZgoA4GfVTNVOkx5U9V8QAIDfmbeToAIA+AdBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQElQAACFBBQAQ+jaoFsuh7Q/H6xMAAI9UM1U7TXpQbba7cQAAPHffTT2oTudLWw3r8dBNFQDAV9VI1UrVTNVOkx5UpQ7qo7rCqv+CZmZmZva5aqRqpXlMlZugAgDg7wQVAECktQ+t1PXu/4Ut1QAAAABJRU5ErkJggg==" InformativeScreenshot="1750bba8f15bcc69ad737423546a805e.png" Reference="ao86_PT9xkmS2L7lE3WumQ/gvsHK9tXakuq_sbIl1cDkQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Oracle PeopleSoft Sign-in' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -177,15 +177,15 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <TryCatch DisplayName="Try Catch : Click Login" sap:VirtualizedContainerService.HintSize="994,530" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                  <TryCatch DisplayName="Try Catch : Click Login" sap:VirtualizedContainerService.HintSize="1016,1304" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign In Button'" sap:VirtualizedContainerService.HintSize="334,197" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Version="V3">
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Sign In Button'" sap:VirtualizedContainerService.HintSize="334,193" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Version="V3">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/?cmd=login&amp;languageCd=ENG&amp;" ContentHash="Q2E2eSwIxkanpMvqjYWc3w" DesignTimeRectangle="652, 669, 592, 40" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Sign In Button'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='ps-button' aaname='Sign In' check:text='Sign In' /&gt;" Guid="779adbbc-106c-4d48-a749-f6a8ca59880f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAlQAAAAsCAYAAACjdiasAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALbSURBVHhe7dxPShxBGIfhHCYnyErIobJKEGKy8C7mD3oOheABxKg7YVaDMBsFoWMZv+qa6ZpRq4064fnBs+lpm1m+VA++6czMzMxs1ASVmZmZ2cjNBdXk4qr78vO029g67N5+OAAAoJAa6fOP09tmKpeDKn3w/quQAgC4T2qmMqpyUKXaqv0BAABDH3d+31VUEVRe8wEAPFxqp1gOqtqNAAAsFxNUAACNYoIKAKBRTFABADSKCSoAgEYxQQUA0CgmqAAAGsUEFQBAo5igAgBoFBNUwHh70256fd1dZ7Nud+6eSXd899nxQXn9HzqY/f0us2m3Xfsc4AnEBBUwziCmQhlVggr4P8UEFTDK7vldQOVw6eNpenQ2uP/ZCCrgGcQEFTBKDqrzSb62fXS5cG3JCdXc6dZlt783vK98fn7urcXXigsGQVU++6zbn8VzbhTfHeAxYoIKGGU+clIU1e6rBVV/rWYQVDWrTp9WBFXNi56mAWsrJqiAkRZOe6qBMgyqPsT6k6YyzoZB1cdaf9+ygLuxKqjyteK7r4ozgCViggp4GhEwpRWv/CKU7guv2ivF/lVhW1DFs5McZ4IKaBATVMATK0+sIngWY6a/Zz6o+uuCClgHMUEFjFCPlP76Y4Nq+DxBBbxmMUEFjFD/DdLwN07DmOnveeBvqAQV8ArFBBUwTu23U2HFb6jKa9nsMv8bBUEFrIOYoALGy4HTu+9V3vDv0knV8D5BBbxmMUEFvIj+9V4RRQ8JJYBXJCaogJdROdXKnBYBayImqICXU4sqMQWskZigAgBoFBNUAACNYoIKAKBRTFABADSKCSoAgEYxQQUA0CgmqAAAGsUEFQBAo1gOqo2tw+qNAAAMpXaK5aDa/HZSvRkAgKFPOyd3FVUE1eTiqnu3+av6BwAA9FIzpXaK5aBKSx9sfj/x+g8AoCI1UjqZKmMqbS6ozMzMzOzxE1RmZmZmo9Z1fwAL5tAKv11iJgAAAABJRU5ErkJggg==" InformativeScreenshot="ff091a9a54adc19574660554b97eab61.png" Reference="ao86_PT9xkmS2L7lE3WumQ/KPB9o1QnQEeJACKj49eKBQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Oracle PeopleSoft Sign-in' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
@@ -211,7 +211,7 @@
                       </uix:NClick>
                     </TryCatch.Try>
                     <TryCatch.Catches>
-                      <Catch x:TypeArguments="uue:VerifyActivityExecutionException" sap:VirtualizedContainerService.HintSize="960,367" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                      <Catch x:TypeArguments="uue:VerifyActivityExecutionException" sap:VirtualizedContainerService.HintSize="982,1141" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -222,20 +222,20 @@
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="uue:VerifyActivityExecutionException" Name="exception" />
                           </ActivityAction.Argument>
-                          <uix:NCheckState DisplayName="Check App State 'Log in Error Message'" sap:VirtualizedContainerService.HintSize="954,298" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Timeout="[intShortTimeout]" Version="V3">
+                          <uix:NCheckState DisplayName="Check App State 'Log in Error Message'" sap:VirtualizedContainerService.HintSize="976,1072" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" Timeout="[intShortTimeout]" Version="V3">
                             <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target appears: Error Message" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <Sequence DisplayName="Target appears: Error Message" sap:VirtualizedContainerService.HintSize="472,855" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="strLoginErrorDescription" />
                                 </Sequence.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:LogMessage DisplayName="Log Message: Error" sap:VirtualizedContainerService.HintSize="410,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log in error observed&quot;]" />
-                                <uix:NGetText DisplayName="Get Text 'Log in Error Message'" sap:VirtualizedContainerService.HintSize="410,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" TextString="[strLoginErrorDescription]" Version="V3">
+                                <ui:LogMessage DisplayName="Log Message: Error" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log in error observed&quot;]" />
+                                <uix:NGetText DisplayName="Get Text 'Log in Error Message'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="1bebf4e0-f6bb-4ed8-a1bb-a13e5ece1ccf" TextString="[strLoginErrorDescription]" Version="V3">
                                   <uix:NGetText.Target>
                                     <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psp/SOKLFTSTNSS/?&amp;cmd=login&amp;errorCode=105&amp;languageCd=ENG" ContentHash="2jpyS8C4I0-u1LdcQBj7qQ" DesignTimeRectangle="652, 413, 592, 22" DesignTimeScaleFactor="1" FriendlyName="'Log in Error Message'" FullSelectorArgument="&lt;webctrl id='ps_login_error_inner' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ps_login_error_inner' tag='DIV' type='' class='ps_login_error_inner' aaname=' &amp;#x9;&amp;#x9;                                                                &amp;#x9;&amp;#x9;   ' /&gt;" Guid="80c40543-8370-435d-b875-b5fa0887b280" ImageBase64="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" InformativeScreenshot="8c0fc56bbbaa121e272cfda9b56eae0b.png" Reference="ao86_PT9xkmS2L7lE3WumQ/LmT_G3BorUetQTT1GKwiOA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Oracle PeopleSoft Sign-in' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                                       <uix:TargetAnchorable.Anchors>
@@ -246,15 +246,15 @@
                                     </uix:TargetAnchorable>
                                   </uix:NGetText.Target>
                                 </uix:NGetText>
-                                <If Condition="[strLoginErrorDescription &lt;&gt;&quot;&quot;]" DisplayName="If Error on screen" sap:VirtualizedContainerService.HintSize="410,542.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
+                                <If Condition="[strLoginErrorDescription &lt;&gt;&quot;&quot;]" DisplayName="If Error on screen" sap:VirtualizedContainerService.HintSize="410,360" sap2010:WorkflowViewState.IdRef="If_2">
                                   <If.Then>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="376,179.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Throw DisplayName="Throw SE: Error message available" Exception="[New System.Exception(&quot;SE: Error encountered while logging into Peoplesoft. Application error message &lt;&quot; + strLoginErrorDescription + &quot;&gt;&quot;)]" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                                      <Throw DisplayName="Throw SE: Error message available" Exception="[New System.Exception(in_strLoginException + &quot;. Application error message &lt;&quot; + strLoginErrorDescription + &quot;&gt;&quot;)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_4" />
                                     </Sequence>
                                   </If.Then>
                                   <If.Else>
@@ -304,7 +304,7 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear: Login Page" sap:VirtualizedContainerService.HintSize="450,390" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear: Login Page" sap:VirtualizedContainerService.HintSize="450,388" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -312,7 +312,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message: Login Page Not found" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Peoplesoft login page did not load in the specified wait time&quot;]" />
-                  <Throw DisplayName="Throw SE1" Exception="[new System.Exception(in_strUserIDTextboxException)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <Throw DisplayName="Throw SE1" Exception="[new System.Exception(in_strUserIDTextboxException)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -332,6 +332,6 @@
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="ygJZo83AtkK-fXu0L6rUbQ" IconBase64="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" InformativeScreenshot="0MIB4Gy_kFEGtYgOcADLYLA" Reference="ao86_PT9xkmS2L7lE3WumQ/NGr28sHhVkGi766AGCDlzA" Selector="&lt;html app='msedge.exe' title='Oracle PeopleSoft Sign-in' /&gt;" Title="Oracle PeopleSoft Sign-in" Url="[strURL]" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message: Workflow completed" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log in to Peoplesoft ended successfully&quot;]" />
+    <ui:LogMessage DisplayName="Log Message: Workflow completed" sap:VirtualizedContainerService.HintSize="1678,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Log in to Peoplesoft ended successfully&quot;]" />
   </Sequence>
 </Activity>
