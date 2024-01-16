@@ -1,0 +1,13 @@
+﻿{
+  "Name": "SaveChanges No Button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "YP7pcO5g6UqSn0neboutLg",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/YP7pcO5g6UqSn0neboutLg",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/25IJ5NWcEECKlFurS8SKlQ",
+  "Created": "2024-01-16T12:32:40.7825947Z",
+  "Updated": "2024-01-16T12:32:40.7825947Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
