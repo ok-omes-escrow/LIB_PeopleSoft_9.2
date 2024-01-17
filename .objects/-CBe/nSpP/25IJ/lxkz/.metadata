@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Process Name",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "lxkzI0X4TUGNQk0i08QpeA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/lxkzI0X4TUGNQk0i08QpeA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/25IJ5NWcEECKlFurS8SKlQ",
+  "Created": "2024-01-17T12:31:24.1496454Z",
+  "Updated": "2024-01-17T12:31:24.1496454Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
