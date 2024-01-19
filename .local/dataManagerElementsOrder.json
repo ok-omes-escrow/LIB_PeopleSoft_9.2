@@ -25,6 +25,8 @@
         "finfoDownloadedFile&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [
+        "out_strReportID",
+        "out_strQueryDescription",
         "in_strProcessInstance",
         "in_strPeoplesoftURL",
         "in_arrFileExtension",
@@ -37,13 +39,7 @@
     {
       "Path": "Test.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dtTableExtract&Sequence_1",
-        "Counter&Sequence_1",
-        "ExtractDataTable&Sequence_1",
-        "strServerNameRow&Sequence_1",
-        "strURL&Sequence_1"
-      ],
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null

@@ -59,6 +59,28 @@
       "IsRequired": false,
       "IsPrincipal": true,
       "DataSourceItems": null
+    },
+    {
+      "Name": "out_strRunControlID",
+      "DisplayName": "out_strRunControlID",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_strReportID",
+      "DisplayName": "out_strReportID",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
     }
   ]
 }
