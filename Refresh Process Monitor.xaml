@@ -1,16 +1,17 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Refresh_Process_Monitor" this:Refresh_Process_Monitor.in_intDuration="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Refresh_Process_Monitor" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_intDuration" Type="InArgument(x:Int32)" />
     <x:Property Name="in_strFilterUserID" Type="InArgument(x:String)" />
     <x:Property Name="in_strDurationType" Type="InArgument(x:String)" />
     <x:Property Name="in_strPeoplesoftURL" Type="InArgument(x:String)" />
     <x:Property Name="in_strRefreshButtonException" Type="InArgument(x:String)" />
+    <x:Property Name="in_strDropDownException" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1488,3041</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1488,5463</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Refresh_Process_Monitor_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -103,9 +104,15 @@
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This workflow refreshes Process Monitor page.&#xA;The actions are:-&#xA;Click Clear Button&#xA;Enter User ID &#xA;Enter Duration&#xA;Select Duration Type&#xA;Click Refresh Button&#xA;Click View All&#xA;&#xA;List of Arguments Used:&#xA;in_strPeoplesoftURL : This refers to the URL of the Process Monitor page of Peoplesoft where we need to enter all details.&#xA;in_intDuration : This refers to the duration we need to see the data for in terms of duration type we mention.&#xA;in_strDurationType : This refers to the Duration type we want to select , it can be days, week etc. depending on the requirement.&#xA;in_strFilterUserID : This refers to the User ID we need to enter to filter the table contents for that particular user.&#xA;in_strNavigationException : This refers to the Exception when the Navigation button to open Menu options is not found on the homepage." DisplayName="Refresh_Process_Monitor" sap:VirtualizedContainerService.HintSize="1112,2976" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="This workflow refreshes Process Monitor page.&#xA;The actions are:-&#xA;Click Clear Button&#xA;Enter User ID &#xA;Enter Duration&#xA;Select Duration Type&#xA;Click Refresh Button&#xA;Click View All&#xA;&#xA;List of Arguments Used:&#xA;in_strPeoplesoftURL : This refers to the URL of the Process Monitor page of Peoplesoft where we need to enter all details.&#xA;in_intDuration : This refers to the duration we need to see the data for in terms of duration type we mention.&#xA;in_strDurationType : This refers to the Duration type we want to select , it can be days, week etc. depending on the requirement.&#xA;in_strFilterUserID : This refers to the User ID we need to enter to filter the table contents for that particular user.&#xA;in_strRefreshButtonException: This exception is thrown when the page has not navigated to process monitor&#xD;&#xA;in_strDropDownException : This exception is thrown if the value is not found in the dropdown" DisplayName="Refresh_Process_Monitor" sap:VirtualizedContainerService.HintSize="1196,5398" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Default="5" Name="intMediumTimeout" />
       <Variable x:TypeArguments="x:String" Name="strURL" />
@@ -116,8 +123,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="1050,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshing Process Monitor...&quot;]" />
-    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="1050,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:LogMessage DisplayName="Log Message: Workflow started" sap:VirtualizedContainerService.HintSize="1134,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshing Process Monitor...&quot;]" />
+    <Assign DisplayName="Assign strURL" sap:VirtualizedContainerService.HintSize="1134,82" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[strURL]</OutArgument>
       </Assign.To>
@@ -125,29 +132,29 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="1050,2140" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="1134,4551" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1016,1923.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1100,4334" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Refresh button'" sap:VirtualizedContainerService.HintSize="954,1807.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Timeout="[intMediumTimeout]" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'Refresh button'" sap:VirtualizedContainerService.HintSize="1038,4219" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Timeout="[intMediumTimeout]" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,1586" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="534,4002" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message: Enter Details" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Populating filter options&quot;]" />
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Clear box'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message: Enter Details" sap:VirtualizedContainerService.HintSize="472,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Populating filter options&quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Clear box'" sap:VirtualizedContainerService.HintSize="472,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="OlIP3IHBskG2L5MQDBtACA" DesignTimeRectangle="1000, 303, 97, 16" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Clear box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_DERIVED_PTPMNCLEARFILTER' aaname='Clear Filter' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_DERIVED_PTPMNCLEARFILTER' aaname='Clear Filter' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Clear' /&gt;" Guid="8a57c0b5-efb6-4c3f-96ec-94db6806a95a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFESURBVGhD7ZfBDYMwDAA7TBfrBB0CsUVHYAMGqMQH0Ue/fBEM4ZLYgJ0AygtM5ZP8SF1UyRfb9AaGOkyKQkyKQkyKQtRJ6csK7s83iwZqyjl8Pv9CT+d/RJGUFjInISg4Sqqg6NjZpBxD/YqFTPCcSTkM7JLsQ8cdYikDFPk06lzIcQfdFx5zjuLVUtL97tiFZbP+7EnokOILt4yoPaQUlPkoB39y4Libirsi+4MC8LP1kXk2iqSk3VIhxRU4Kih2Dhcl4aJiqRq4dKdgV7CxxEIWOhxxUkrK2DySa+wU1klcyt7LAULjyYXYIyYlCTGWArbevrBTdsae3x9Bnha/SUmCbnUgBgu/9T+Fnpm7YIQX3UvhY5G+P4swKUn4rqDCYcibHnfUUugpeJFRKs/RfvEiTYqRiElRiElRiElRiElRB8APCle88ADrNVoAAAAASUVORK5CYII=" InformativeScreenshot="7ed4b71c03a1061902a78dfbd0cb31de.png" Reference="ao86_PT9xkmS2L7lE3WumQ/fAE-V9kkEEKbrmhCgwZx3Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Visible">
                         <uix:TargetAnchorable.Anchors>
@@ -158,7 +165,8 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID Filter field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Text="[in_strFilterUserID]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message: Click Clear" sap:VirtualizedContainerService.HintSize="472,143" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Clicked Clear button&quot;]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID Filter field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="472,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Text="[in_strFilterUserID]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="Yj46RXd12kWOb78dchNjZA" DesignTimeRectangle="114, 253, 138, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'User ID Filter field'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='User ID' id='PMN_FILTER_WRK_WS_OPRID' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='INPUT' aaname='User ID' id='PMN_FILTER_WRK_WS_OPRID' type='text' class='PSEDITBOX PTCPEDITBOXWITHICON ' /&gt;" Guid="39d2dffc-83be-458e-be84-dbe22c289b62" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAAiCAYAAACJI+GdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVHhe7dzNi9pAGMfx/qHiCx4EEUER/AvszV5EsXopIvRStVZsD4onRVhYaWmttl23FBHEtqio6Bb1Kc9knN3sGg05mt8HBs1McvuSFyQ+IwALEA5YgnDAEl04V51P9PLVa3r+IoWBIQb3wF08psLhxTflD/T7z185A0CiB+7i6lofjwqHy0I0cMx6vaG372tyS6PC4dMSgJHrj5/lNw3CAVO+3dzKbxqEA6YgHJsZj8dUKpWoUCiIT962AuHYxGKxoEQiQQ6H48lIJpO0XC7lnuYgHBtYr9cUDoePRnMY0WiUNpuNPOI8hGMDmUxGBeLz+ahSqVCn06FqtUp+v1+t5XI5ecR5COfC8T3MIYxAIEDT6VSuaPgSFgqFxLrL5aL5fC5XTkM4F65Wq6lwGo2GnNVrt9tqn1arJWdPQzgXrlwuqyj6/b6c1RuNRmofvnyZgXAuHJ9lDlHU63U5q9ftdtU+OOOAMJlMVBT8ZLXdbuXKvcNjutPpxD0O3Eun0yqeWCxGg8FABLTf73WXskgkQrvdTh51GsKxgdVqRcFgUAVyaqRSKRHUOQjHJmazGcXj8aOx8KXK4/Go7Ww2K48yhnBsZjgcUrFYFL9TNZtNcQ/Eer0eud1uFU8+nxfzRhAOKPx09TAeo8d3hnBAh+Pxer1nH8sRDjxh5pdyhAOWIBywBOGAJQgHLEE4YIlhOHghD4zc3f2jL73vckujwhGvAL/DK8Cgx9Hc/PxFX/s/5IxGhcP4/WD86QDGwyH+dODRe+NMFw6AOUT/AdPh5BldeogsAAAAAElFTkSuQmCC" InformativeScreenshot="dd00661b141cbac3953f9a745c9a1d41.png" IsResponsive="True" Reference="ao86_PT9xkmS2L7lE3WumQ/2AH1nOQKCk661871R7XJFQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Visible">
                         <uix:TargetAnchorable.Anchors>
@@ -169,7 +177,8 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Duration Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Text="[in_intDuration.ToString]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message: Enter User ID" sap:VirtualizedContainerService.HintSize="472,143" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Typed -&quot; &amp; in_strFilterUserID &amp; &quot;-into User ID&quot;]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Duration Field'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="472,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Text="[in_intDuration.ToString]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="ViuaH6JFSkG9GcBwplB-4w" DesignTimeRectangle="712, 253, 101, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Duration field'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERVALUE' tag='INPUT' class='PSEDITBOX' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERVALUE' tag='INPUT' class='PSEDITBOX' type='text' aaname='' /&gt;" Guid="55c50580-988f-499e-9e27-7f89e418c769" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAAiCAYAAABcHfeVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD1SURBVGhD7do9asNAFEXh2eHsKupSBtKlmyZN3GQJAoMDWYULO2t40TWyLAWlnnfhHHign24+pnslKH0gGQSSQRuk49d3vL61eHp+YTqNzl8O6xYk/Xj/+IzL9Wf+Qj3S+cvheHpALUgSBChHcpDHvQVJV43ytPYAKWkgGQSSQSAZBJJBIKVojKHUaOf59U8gdU9AJQpISRuHCWcCqjUqSBk7R6slhlGPDaT0gWQQSAaBZBBIBoFkEEgGgeQfSAaBZBBIBoFkEEgGgWTQLhLLkXn6dznytmZ8YM24dzp/OeyuGSv9kKCuGtNndP5rILVBooxF/AJtXhcGmO33WAAAAABJRU5ErkJggg==" InformativeScreenshot="dfc8fe97a4404d795e16fecbc50d2559.png" Reference="ao86_PT9xkmS2L7lE3WumQ/3J2kqVzFck6iT3i0xvoclg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -180,27 +189,112 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NSelectItem DisplayName="Select Item 'Day/Week/Year Option'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[in_strDurationType]" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
-                    <uix:NSelectItem.Items>
-                      <scg:List x:TypeArguments="x:String" Capacity="5">
-                        <x:String>All</x:String>
-                        <x:String>Days</x:String>
-                        <x:String>Hours</x:String>
-                        <x:String>Minutes</x:String>
-                        <x:String>Years</x:String>
-                      </scg:List>
-                    </uix:NSelectItem.Items>
-                    <uix:NSelectItem.Target>
-                      <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="LCIBEMA3102xtC3YlBrILg" DesignTimeRectangle="827, 253, 102, 30" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Interval Select box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERUNIT' tag='SELECT' innertext=' All Days Hours Minutes Years ' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERUNIT' tag='SELECT' innertext=' All Days Hours Minutes Years ' type='' class='PSDROPDOWNLIST' aaname='' /&gt;" Guid="d743514b-9daf-44a9-9f1b-073afc0da8b5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAiCAYAAAC3KkyWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVGhD7ZpNasMwEEZ9kCwSkvv4VtUqzc7QrLrzppt20yMYAi30AlkkEC/anmHqGUv2yJZLIXaiaeaBwNaPwXp8EweUgCICFSUEFSUET9Tu/QMeHnO4u8+0XbGhA3TBaUThwNPzK3x+fdse5VqgA3Sxe2tlNaLQokqKB3SBThyNKIycEhfciYqKGBUlBBUlBBUlBBUlhPNEFQaSJAk0A4WdoozDCKL6Uso8rfpTyEvboZzNJKKQwlTJSnNQV+MwmagqVpDyVNF9p0Qau5Ke00mgt76EPOVr5ad1vV5DWfZfAvs2m429a5lOVNVrqk2tXfBrC631x1O2+1Q+bSIpnWwxH5NIlmX07qvVCk6nk+0FusY+HNtut7a35kKiQvjjfqmsE1SLs2kafpA4MDXz+byRhffYnCTXx7mwqG4JY+O8/HXLpk1f3eSXPeR4PMJyuaR3WiwW1PAa+3jKHNOJos12Y7U02ujWTEdkm6Lh0sZFyxd2OBwaQU4SCgwxmSjvdyU0z35c8MSRIJOzsjcEL42yQTGz2YxK4ZAkZBJRvf9RNI8noE0YF+Xk+XMDv1Hd0iic/X5P6fqNEUTVG+63IXntHFMEBDgpvbLHSmez3g7dCOeJGp3/U9LGJi5R3geIwolGFH183GBJ+ytxJUoZREUJQUUJQUUJIShKD2DGxeABTDrS/KJHmmMAHaCL4JFmBAfQIkZO2/UaOuCSEE+UEisAP+lLVOgNE7XlAAAAAElFTkSuQmCC" InformativeScreenshot="9d398eb913d1657a030991b7c73aa7ee.png" Reference="ao86_PT9xkmS2L7lE3WumQ/-vkLojJUoEG7x9jPTbUBgA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="1000, 260, 97, 16" ElementType="Button" FriendlyName="'Interval Select box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVGhD7ZY9roMwDIDfAXqILm9jZOnC0KogVSob9z+KX4jzYydBoZXIs4SHT2px4oC/OPCzLAsoslApAlEpAlEpAmkk5QXd7x0uRR5we5fmbDMPj6/n1sF77cZSrA1NpZQeFAv8SXGPLppKMcxw6+5wHeZCrMB7gushHeJRKSHGpIyjO56QEEuuX/oXdlo/WbFsrJXHx4b8hngEJvP8vQ58fktJQo6vEZ4b/zNpSaf44rLcVh7tJuzGIMbGyRosJ67H4lm+YxHwoqcCsHiZPFrEohSaY4Fnn3TeCplXmhNJNgG51qpb/q1TsDDp7tshrySlm2AOOVxXFHP4eXyduoCTSFlZdzQTYwteefiqFFwr65QNcHNQOSeX4q/Hou4o6N5OSV7sNWKe00sxuC8qH8OdS7rHYDvKF74qxZDkDOPcEUh/Y5x+lqsUg38HJIU24wO06HukrDgxkfxjgMVDZ51GivIJKkUgKkUgKkUgKkUcC/wBvCxacl9xf7AAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NSelectItem.Target>
-                  </uix:NSelectItem>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Refresh button'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message: Enter Duration" sap:VirtualizedContainerService.HintSize="472,143" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Typed &quot; &amp; in_intDuration.ToString &amp; &quot; in Duration field&quot;]" />
+                  <Sequence DisplayName="Select Duration Type" sap:VirtualizedContainerService.HintSize="472,1682" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="ui:UiElement" Name="uielementIntervalDropdown" />
+                      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="ienumChildren" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NCheckState DisplayName="Check App State 'Interval Select box'" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="410,177" sap2010:WorkflowViewState.IdRef="NCheckState_2" OutUiElement="[uielementIntervalDropdown]" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message - interval dropdown" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Interval dropdown is available&quot;]" />
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message - interval dropdown unavailable" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Interval dropdown is not available&quot;]" />
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="K_SKSylWskmvDB3KM_t8Eg" DesignTimeRectangle="827, 253, 102, 30" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Interval Select box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERUNIT' tag='SELECT' innertext=' All Days Hours Minutes Years ' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERUNIT' tag='SELECT' innertext=' All Days Hours Minutes Years ' type='' class='PSDROPDOWNLIST' aaname='' /&gt;" Guid="d743514b-9daf-44a9-9f1b-073afc0da8b5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAiCAYAAAC3KkyWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVGhD7ZpNasMwEEZ9kCwSkvv4VtUqzc7QrLrzppt20yMYAi30AlkkEC/anmHqGUv2yJZLIXaiaeaBwNaPwXp8EweUgCICFSUEFSUET9Tu/QMeHnO4u8+0XbGhA3TBaUThwNPzK3x+fdse5VqgA3Sxe2tlNaLQokqKB3SBThyNKIycEhfciYqKGBUlBBUlBBUlBBUlhPNEFQaSJAk0A4WdoozDCKL6Uso8rfpTyEvboZzNJKKQwlTJSnNQV+MwmagqVpDyVNF9p0Qau5Ke00mgt76EPOVr5ad1vV5DWfZfAvs2m429a5lOVNVrqk2tXfBrC631x1O2+1Q+bSIpnWwxH5NIlmX07qvVCk6nk+0FusY+HNtut7a35kKiQvjjfqmsE1SLs2kafpA4MDXz+byRhffYnCTXx7mwqG4JY+O8/HXLpk1f3eSXPeR4PMJyuaR3WiwW1PAa+3jKHNOJos12Y7U02ujWTEdkm6Lh0sZFyxd2OBwaQU4SCgwxmSjvdyU0z35c8MSRIJOzsjcEL42yQTGz2YxK4ZAkZBJRvf9RNI8noE0YF+Xk+XMDv1Hd0iic/X5P6fqNEUTVG+63IXntHFMEBDgpvbLHSmez3g7dCOeJGp3/U9LGJi5R3geIwolGFH183GBJ+ytxJUoZREUJQUUJQUUJIShKD2DGxeABTDrS/KJHmmMAHaCL4JFmBAfQIkZO2/UaOuCSEE+UEisAP+lLVOgNE7XlAAAAAElFTkSuQmCC" InformativeScreenshot="9d398eb913d1657a030991b7c73aa7ee.png" Reference="ao86_PT9xkmS2L7lE3WumQ/-vkLojJUoEG7x9jPTbUBgA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="1000, 260, 97, 16" ElementType="Button" FriendlyName="'Interval Select box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVGhD7ZY9roMwDIDfAXqILm9jZOnC0KogVSob9z+KX4jzYydBoZXIs4SHT2px4oC/OPCzLAsoslApAlEpAlEpAmkk5QXd7x0uRR5we5fmbDMPj6/n1sF77cZSrA1NpZQeFAv8SXGPLppKMcxw6+5wHeZCrMB7gushHeJRKSHGpIyjO56QEEuuX/oXdlo/WbFsrJXHx4b8hngEJvP8vQ58fktJQo6vEZ4b/zNpSaf44rLcVh7tJuzGIMbGyRosJ67H4lm+YxHwoqcCsHiZPFrEohSaY4Fnn3TeCplXmhNJNgG51qpb/q1TsDDp7tshrySlm2AOOVxXFHP4eXyduoCTSFlZdzQTYwteefiqFFwr65QNcHNQOSeX4q/Hou4o6N5OSV7sNWKe00sxuC8qH8OdS7rHYDvKF74qxZDkDOPcEUh/Y5x+lqsUg38HJIU24wO06HukrDgxkfxjgMVDZ51GivIJKkUgKkUgKkUgKkUcC/wBvCxacl9xf7AAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NCheckState.Target>
+                    </uix:NCheckState>
+                    <ui:FindChildren Children="[ienumChildren]" DisplayName="Find Children - Interval Select box" Filter="[&quot;&lt;webctrl aaname='&quot; &amp; in_strDurationType &amp; &quot;'/&gt;&quot;]" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_CHILDREN">
+                      <ui:FindChildren.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[uielementIntervalDropdown]" Id="e7f41679-0424-4da7-b5ee-97277a2e1e6a" InformativeScreenshot="9e3ff91850fd0fdb713faa1e3d4e853a">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:FindChildren.Target>
+                    </ui:FindChildren>
+                    <ui:LogMessage DisplayName="Log Message: Find children for Duration" sap:VirtualizedContainerService.HintSize="410,143" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Finding children for Duration dropdown&quot;]" />
+                    <If Condition="[ienumChildren.Count&gt;0]" DisplayName="If ienumChildren.Count&gt;0" sap:VirtualizedContainerService.HintSize="410,1020" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,838" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="strAaname" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log Message: Drop down found" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Duration &quot; &amp; in_strDurationType &amp; &quot; found in the dropdown&quot;]" />
+                          <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DisplayName="Get Attribute - First element" sap:VirtualizedContainerService.HintSize="334,187" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" InUiElement="[ienumChildren(0)]" Result="[strAaname]" Version="V3" />
+                          <uix:NSelectItem DisplayName="Select Item 'Duration type'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[strAaname]" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="5">
+                                <x:String>All</x:String>
+                                <x:String>Days</x:String>
+                                <x:String>Hours</x:String>
+                                <x:String>Minutes</x:String>
+                                <x:String>Years</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="K_SKSylWskmvDB3KM_t8Eg" DesignTimeRectangle="827, 253, 102, 30" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Interval Select box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERUNIT' tag='SELECT' innertext=' All Days Hours Minutes Years ' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='PMN_FILTER_WRK_PT_FILTERUNIT' tag='SELECT' innertext=' All Days Hours Minutes Years ' type='' class='PSDROPDOWNLIST' aaname='' /&gt;" Guid="d743514b-9daf-44a9-9f1b-073afc0da8b5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGoAAAAiCAYAAAC3KkyWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIjSURBVGhD7ZpNasMwEEZ9kCwSkvv4VtUqzc7QrLrzppt20yMYAi30AlkkEC/anmHqGUv2yJZLIXaiaeaBwNaPwXp8EweUgCICFSUEFSUET9Tu/QMeHnO4u8+0XbGhA3TBaUThwNPzK3x+fdse5VqgA3Sxe2tlNaLQokqKB3SBThyNKIycEhfciYqKGBUlBBUlBBUlBBUlhPNEFQaSJAk0A4WdoozDCKL6Uso8rfpTyEvboZzNJKKQwlTJSnNQV+MwmagqVpDyVNF9p0Qau5Ke00mgt76EPOVr5ad1vV5DWfZfAvs2m429a5lOVNVrqk2tXfBrC631x1O2+1Q+bSIpnWwxH5NIlmX07qvVCk6nk+0FusY+HNtut7a35kKiQvjjfqmsE1SLs2kafpA4MDXz+byRhffYnCTXx7mwqG4JY+O8/HXLpk1f3eSXPeR4PMJyuaR3WiwW1PAa+3jKHNOJos12Y7U02ujWTEdkm6Lh0sZFyxd2OBwaQU4SCgwxmSjvdyU0z35c8MSRIJOzsjcEL42yQTGz2YxK4ZAkZBJRvf9RNI8noE0YF+Xk+XMDv1Hd0iic/X5P6fqNEUTVG+63IXntHFMEBDgpvbLHSmez3g7dCOeJGp3/U9LGJi5R3geIwolGFH183GBJ+ytxJUoZREUJQUUJQUUJIShKD2DGxeABTDrS/KJHmmMAHaCL4JFmBAfQIkZO2/UaOuCSEE+UEisAP+lLVOgNE7XlAAAAAElFTkSuQmCC" InformativeScreenshot="9d398eb913d1657a030991b7c73aa7ee.png" Reference="ao86_PT9xkmS2L7lE3WumQ/-vkLojJUoEG7x9jPTbUBgA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="1000, 260, 97, 16" ElementType="Button" FriendlyName="'Interval Select box'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Refresh' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF0SURBVGhD7ZY9roMwDIDfAXqILm9jZOnC0KogVSob9z+KX4jzYydBoZXIs4SHT2px4oC/OPCzLAsoslApAlEpAlEpAmkk5QXd7x0uRR5we5fmbDMPj6/n1sF77cZSrA1NpZQeFAv8SXGPLppKMcxw6+5wHeZCrMB7gushHeJRKSHGpIyjO56QEEuuX/oXdlo/WbFsrJXHx4b8hngEJvP8vQ58fktJQo6vEZ4b/zNpSaf44rLcVh7tJuzGIMbGyRosJ67H4lm+YxHwoqcCsHiZPFrEohSaY4Fnn3TeCplXmhNJNgG51qpb/q1TsDDp7tshrySlm2AOOVxXFHP4eXyduoCTSFlZdzQTYwteefiqFFwr65QNcHNQOSeX4q/Hou4o6N5OSV7sNWKe00sxuC8qH8OdS7rHYDvKF74qxZDkDOPcEUh/Y5x+lqsUg38HJIU24wO06HukrDgxkfxjgMVDZ51GivIJKkUgKkUgKkUgKkUcC/wBvCxacl9xf7AAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                          <ui:LogMessage DisplayName="Log Message: Select Duration" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Duration &quot; &amp; in_strDurationType &amp; &quot; selected&quot;]" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,178" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Throw DisplayName="Throw SE" Exception="[new System.Exception(in_strDropDownException)]" sap:VirtualizedContainerService.HintSize="334,90" sap2010:WorkflowViewState.IdRef="Throw_2" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                  <ui:LogMessage DisplayName="Log Message: Refresh" sap:VirtualizedContainerService.HintSize="472,143" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Clicking Refresh...&quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Refresh button'" sap:VirtualizedContainerService.HintSize="472,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="1RLv5KxfrkC8eB8LPLqnsw" DesignTimeRectangle="1000, 260, 97, 16" DesignTimeScaleFactor="1" FriendlyName="'Refresh button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='REFRESH_BTN' aaname='Refresh' class='PSPUSHBUTTON' tag='INPUT' type='button' check:text='Refresh' /&gt;" Guid="07bb1082-04e0-4bb9-a372-67a0736cf982" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAUCAYAAACUAvOrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF3SURBVGhD7ZbRDcIgEEAdxsWcwCGMW3QEN+gAJv4Y/eivv0aHOIGDcgc0oEnrJb2XkEgpR73H0W5AEYdKEYhKEYhKEchCUh5w2J9hW2wXOD39bY28+svPc+vgsx7uvvsHFpVS+qOY4G+SO3fSVIrhDafjGXb92/crPAfYzVIhAZViwDEm5X7zxxO2cSy5vu0eWGnd4MSye508fi8lHoHJvPCsPZ+/pCQhx9cNrhP9TFpSKSG5LLaTR6sJq3EU48bJGiwmrsfGs3jzIuBFTwVg8jJ5NIlFKTQGwLVLKs9C5pXmRJJN4JjeVHPwt0rBxKS7r0FeScpxgBd2Db4qijHCPL5OXcBKpFjsjmZiXMIrf74qBdfKKmUC3BxUzsqlhOsxqQ0Jba2U5MVeI8ZZvRSD/6IKY7hzSfUYXEWFxFelGJKYFoyLRyD9jdDPcpViCO+AJNHm/rHRpLdIsXgxseUfA2x8rKzVSFG+QaUIRKUIRKUIRKWIA+ADfKZXUBR07ZcAAAAASUVORK5CYII=" InformativeScreenshot="0we4SE2-BwEaysx8gPRpVyg" Reference="ao86_PT9xkmS2L7lE3WumQ/Mz5_a6hpLkyw6q0HaZYJwQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -211,7 +305,8 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'View All button'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message: Select Duration" sap:VirtualizedContainerService.HintSize="472,143" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Clicking View all button&quot;]" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'View All button'" sap:VirtualizedContainerService.HintSize="472,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="39211d05-1ec3-47f8-95d1-812e86ba8445" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://soklf-tst.opc.oracleoutsourcing.com/psc/SOKLFTSTNSS/EMPLOYEE/ERP/c/PROCESSMONITOR.PROCESSMONITOR.GBL?PortalActualURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentURL=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2fEMPLOYEE%2fERP%2fc%2fPROCESSMONITOR.PROCESSMONITOR.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Process%20Monitor&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsp%2fSOKLFTSTNSS%2f&amp;PortalURI=https%3a%2f%2fsoklf-tst.opc.oracleoutsourcing.com%2fpsc%2fSOKLFTSTNSS%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="_gAowfLbZ02JnUxHco3ohg" DesignTimeRectangle="1447, 463, 51, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'View All button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='View All' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl tag='A' aaname='View All' type='' class='PTCPGRIDHDRVIEWALLDIVACH' check:text='View All' /&gt;" Guid="6b9b4041-313c-4a03-b2b6-ddf0da0ce01f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAUCAYAAAAp46XeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHoSURBVFhH3ZexigJBDIbvZXwVQRB8B5/Ad1gsfAcrQRC0sRThWsFG1sJ2wUq0FGxzk0xmJ5OJh2shuD8sdzO7k+T7k13wp9vtQltUVRXMZjPo9XqAXK2CC1oul+2Fu9/v7YVDRbjLCYajHQy3N76ldYPVeAed8Ql+p+7vtOL9D+hYQsfVhrmvvBV03e7jPjHsYXWhW2nnDli0EYDE8MWR1x+Ur2tv5n8ZLjhkAVCQUQkHXn9OFRRUE0+OmpjX4cLoZSPnE4SRJSeTZ/ice8ZfwYRQGC28yEBpkj/77HWQploGN4B70iEqKB5K4VJwlIyhjaC1iKULSqXNzs1qBGcVaxYY1gievaeiG0mnMHYJK1dQiJ8Up2WAU27xfEM4HSB3S8L5Lrm1cXkAPM8JMTnGFYZgLGmklAmupqgxnHzISiDhtJO5YhcxVgTGbgrwTN5UyzS8zM6/BFcXVJkve9459Y4q+QJKKNznPCTGGMVUjqyS6pAU5edzb8A5UXAMkieQcLXD9dqJkohR5rUE8aaoc0JpDiWuDeO/B2cVzcoT5yOUfP6zr56TNkDqv3ukGO9NuO9XDXc+n3mrHXo8HhFusVjwdju02Ww8HP5q7ff7sF6v6XfQNws7hmCDwcDDzedz+qdt12QygT/qyj/N2yhdrQAAAABJRU5ErkJggg==" InformativeScreenshot="0VhILOsSlvUOqUQfEvnSBjg" Reference="ao86_PT9xkmS2L7lE3WumQ/CWRjnDqTn0qdS6vEtbofUg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Process Monitor' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -225,15 +320,15 @@
                 </Sequence>
               </uix:NCheckState.IfExists>
               <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message: Refresh Button Not found" sap:VirtualizedContainerService.HintSize="388,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Refresh Button not found&quot;]" />
-                  <Throw DisplayName="Throw SE" Exception="[New System.Exception(in_strRefreshButtonException)]" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                  <ui:LogMessage DisplayName="Log Message: Refresh Button Not found" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Refresh Button not found&quot;]" />
+                  <Throw DisplayName="Throw SE" Exception="[New System.Exception(in_strRefreshButtonException)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -259,6 +354,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <ui:LogMessage DisplayName="Log Message: Workflow completed" sap:VirtualizedContainerService.HintSize="1050,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshed Process Monitor successfully&quot;]" />
+    <ui:LogMessage DisplayName="Log Message: Workflow completed" sap:VirtualizedContainerService.HintSize="1134,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Refreshed Process Monitor successfully&quot;]" />
   </Sequence>
 </Activity>
