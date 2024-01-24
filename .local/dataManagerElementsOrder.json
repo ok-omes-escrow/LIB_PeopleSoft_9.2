@@ -25,8 +25,8 @@
         "finfoDownloadedFile&Sequence_4"
       ],
       "ArgumentsSectionElementsOrder": [
+        "out_strRunControlID",
         "out_strReportID",
-        "out_strQueryDescription",
         "in_strProcessInstance",
         "in_strPeoplesoftURL",
         "in_arrFileExtension",
@@ -39,7 +39,14 @@
     {
       "Path": "Test.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "name&Sequence_4",
+        "children&Sequence_1",
+        "Element&Sequence_1",
+        "reportID&Sequence_1",
+        "runcontrolID&Sequence_1",
+        "counterI&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
@@ -98,15 +105,34 @@
       "Path": "Refresh Process Monitor.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strAaname&Sequence_8",
+        "ienumChildren&Sequence_5",
+        "uielementIntervalDropdown&Sequence_5",
         "intMediumTimeout&Sequence_1",
         "strURL&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_strDropDownException",
         "in_intDuration",
         "in_strFilterUserID",
         "in_strDurationType",
         "in_strPeoplesoftURL",
         "in_strRefreshButtonException"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Navigate to Process Scheduler.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intMediumTimeout&Sequence_2",
+        "strURL&Sequence_2",
+        "elmtNavigationButtonElement&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strPeoplesoftURL",
+        "in_strNavigationException"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
