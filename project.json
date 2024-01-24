@@ -35,7 +35,6 @@
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": [
-        "Test.xaml",
         "Extract File Info.xaml"
       ]
     },
