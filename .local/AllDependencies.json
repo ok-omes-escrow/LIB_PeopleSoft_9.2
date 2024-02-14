@@ -17297,15 +17297,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\55648C\\.nuget\\packages\\": {}
+    "C:\\Users\\55651C\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "LIB_PeopleSoft_9.2",
       "projectName": "LIB_PeopleSoft_9.2",
-      "projectPath": "C:\\Users\\55648C\\Documents\\SOK_GIT\\LIB_PeopleSoft_9.2\\.local",
-      "packagesPath": "C:\\Users\\55648C\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\55648C\\Documents\\SOK_GIT\\LIB_PeopleSoft_9.2\\.local"
+      "projectPath": "C:\\Users\\55651C\\Documents\\UiPath\\LIB_PeopleSoft_9.2\\.local",
+      "packagesPath": "C:\\Users\\55651C\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\55651C\\Documents\\UiPath\\LIB_PeopleSoft_9.2\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {

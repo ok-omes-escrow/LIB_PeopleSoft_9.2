@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Home",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "t6MwHlIgW0inKG3fAQV9Vg",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/t6MwHlIgW0inKG3fAQV9Vg",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/ad-gUXmG10WnVBLt7IRMeA",
+  "Created": "2024-02-14T14:49:56.2264228Z",
+  "Updated": "2024-02-14T14:53:32.2388595Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
