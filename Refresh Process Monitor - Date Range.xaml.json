@@ -1,0 +1,86 @@
+{
+  "DisplayName": "Refresh Process Monitor - Date Range",
+  "Tooltip": "This workflow refreshes Process Monitor page.\nThe actions are:-\nClick Clear Button\nEnter User ID \nEnter Duration\nSelect Duration Type\nClick Refresh Button\nClick View All\n\nList of Arguments Used:\nin_strPeoplesoftURL : This refers to the URL of the Process Monitor page of Peoplesoft where we need to enter all details.\nin_intDuration : This refers to the duration we need to see the data for in terms of duration type we mention.\nin_strRangeType : This refers to the range type we want to select , it can be Last or Date Range depending on the requirement.\nin_strFilterUserID : This refers to the User ID we need to enter to filter the table contents for that particular user.\nin_strRefreshButtonException: This exception is thrown when the page has not navigated to process monitor\nin_strDropDownException : This exception is thrown if the value is not found in the dropdown",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_strFilterUserID",
+      "DisplayName": "in_strFilterUserID",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strRangeType",
+      "DisplayName": "in_strRangeType",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strPeoplesoftURL",
+      "DisplayName": "in_strPeoplesoftURL",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strRefreshButtonException",
+      "DisplayName": "in_strRefreshButtonException",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strDropDownException",
+      "DisplayName": "in_strDropDownException",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strStartDate",
+      "DisplayName": "in_strStartDate",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strEndDate",
+      "DisplayName": "in_strEndDate",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}
