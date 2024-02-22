@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Password Expiry Label",
+  "Description": "This label appears when the service account password is expired",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "rfNgiEtSe0GF9qf3Y3abkg",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/rfNgiEtSe0GF9qf3Y3abkg",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/NGr28sHhVkGi766AGCDlzA",
+  "Created": "2024-02-22T13:41:49.7476777Z",
+  "Updated": "2024-02-22T13:41:49.7476777Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
