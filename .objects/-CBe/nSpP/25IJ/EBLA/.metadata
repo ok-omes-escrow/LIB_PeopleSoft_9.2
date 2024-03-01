@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Process Type Dropdown",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "EBLAFl0AwU2qjTHlYW-B5w",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/EBLAFl0AwU2qjTHlYW-B5w",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/25IJ5NWcEECKlFurS8SKlQ",
+  "Created": "2024-03-01T08:42:47.4295002Z",
+  "Updated": "2024-03-01T08:42:47.4295002Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

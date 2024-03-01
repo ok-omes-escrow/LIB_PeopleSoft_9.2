@@ -1,0 +1,13 @@
+﻿{
+  "Name": "BU Required OK Button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "8EniIjxbiEOO6YI7gin1NQ",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/8EniIjxbiEOO6YI7gin1NQ",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/xI9nd8rHrEWqm4FYG9Q-pQ",
+  "Created": "2024-03-01T10:03:18.3847227Z",
+  "Updated": "2024-03-01T10:03:18.3847227Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

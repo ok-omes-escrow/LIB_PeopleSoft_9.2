@@ -71,12 +71,14 @@
       "Path": "Peoplesoft Login.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strLoginErrorDescription&Sequence_18",
+        "strLoginErrorDescription&Sequence_13",
         "intShortTimeout&Sequence_1",
         "intLongTimeout&Sequence_1",
-        "strURL&Sequence_1",
-        "strLoginErrorDescription&Sequence_9"
+        "strURL&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_strPasswordResetException",
         "in_strUsername",
         "in_strPassword",
         "in_strPeoplesoftURL",
@@ -118,6 +120,33 @@
       "ArgumentsSectionElementsOrder": [
         "in_strPeoplesoftURL",
         "in_strNavigationException"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Refresh Process Monitor - Date Range.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strTypeAaname&Sequence_13",
+        "strRangeAaname&Sequence_8",
+        "ienumRangeChildren&Sequence_5",
+        "ienumTypeChildren&Sequence_12",
+        "uielementTypeDropdown&Sequence_12",
+        "uielementRangeDropdown&Sequence_5",
+        "intMediumTimeout&Sequence_1",
+        "strURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strProcessName_Optional",
+        "in_strProcessType_Optional",
+        "in_strFilterUserID",
+        "in_strPeoplesoftURL",
+        "in_strRefreshButtonException",
+        "in_strDropDownException",
+        "in_strRangeType",
+        "in_strStartDate",
+        "in_strEndDate"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
