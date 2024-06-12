@@ -150,6 +150,70 @@
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
+    },
+    {
+      "Path": "Navigate to Customer Information.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intMediumTimeout&Sequence_2",
+        "strURL&Sequence_2",
+        "elmtNavigationButtonElement&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_intDelayForActivity",
+        "in_strPeoplesoftURL",
+        "in_strNavigationException"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Get Email Address for the Customer.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intShortTimeout&Sequence_1",
+        "intMediumTimeout&Sequence_1",
+        "intVeryLongTimeout&Sequence_1",
+        "strViewLogTraceWindowCounter&Sequence_1",
+        "strProcessDetailWindowCounter&Sequence_1",
+        "strDownloadFileName&Sequence_1",
+        "strURL&Sequence_1",
+        "strElementClass&Sequence_2",
+        "strElementControlID&Sequence_2",
+        "strInstanceElementIndex&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_intDelayForActivity",
+        "in_strPeoplesoftURL",
+        "out_strEmailAddress",
+        "in_strSetID",
+        "in_strCustomerID",
+        "in_strGetEmailException"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Financial Peoplesoft Login.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intShortTimeout&Sequence_1",
+        "intLongTimeout&Sequence_1",
+        "strURL&Sequence_1",
+        "strLoginErrorDescription&Sequence_18",
+        "strLoginErrorDescription&Sequence_13"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_intDelayForActivity",
+        "in_strUsername",
+        "in_strPassword",
+        "in_strPeoplesoftURL",
+        "in_strUserIDTextboxException",
+        "in_strLoginException",
+        "in_strPasswordResetException"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
     }
   ]
 }
