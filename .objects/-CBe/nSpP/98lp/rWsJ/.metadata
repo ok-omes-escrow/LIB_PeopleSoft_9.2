@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Password Field",
+  "Type": "Element",
+  "TaxonomyType": "Password",
+  "Id": "rWsJ20yFcUmg5UVf1a2g7g",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/rWsJ20yFcUmg5UVf1a2g7g",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/98lpRkBx5UmxSwCMPUj_qQ",
+  "Created": "2024-05-15T13:29:10.7653289Z",
+  "Updated": "2024-05-15T13:29:36.0304437Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

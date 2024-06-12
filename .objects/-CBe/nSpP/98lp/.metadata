@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge: Finance Peoplesoft Sign-in",
+  "Type": "Screen",
+  "Id": "98lpRkBx5UmxSwCMPUj_qQ",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/98lpRkBx5UmxSwCMPUj_qQ",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/nSpPxvg0_kuOWgXwF3AoOA",
+  "Created": "2024-05-15T13:20:24.7895736Z",
+  "Updated": "2024-05-15T13:20:24.7895736Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Customer ID",
+  "Type": "Element",
+  "TaxonomyType": "Search",
+  "Id": "Gvj_Fr7W4EyHtA-xfYxZDA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/Gvj_Fr7W4EyHtA-xfYxZDA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/o4SDkhYJxkW_FS2XHWINsA",
+  "Created": "2024-05-13T09:10:58.5288576Z",
+  "Updated": "2024-05-13T09:19:00.5489027Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

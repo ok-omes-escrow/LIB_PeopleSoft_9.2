@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Customer",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "9RVbdMsPj0GMwO7nikVhQQ",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/9RVbdMsPj0GMwO7nikVhQQ",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/_twL6FVNvkuHRL3joyuEWA",
+  "Created": "2024-05-13T07:37:33.4764562Z",
+  "Updated": "2024-05-13T09:00:57.9528047Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

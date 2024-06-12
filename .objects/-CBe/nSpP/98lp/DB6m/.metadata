@@ -1,0 +1,16 @@
+﻿{
+  "Name": "LDA Account",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "DB6mncwYr0abCJyWmX-THg",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/DB6mncwYr0abCJyWmX-THg",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/98lpRkBx5UmxSwCMPUj_qQ",
+  "Created": "2024-05-15T14:16:58.8030034Z",
+  "Updated": "2024-05-15T14:48:38.1862537Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

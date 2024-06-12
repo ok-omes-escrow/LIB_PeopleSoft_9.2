@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Signin Button",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "D94jwCcmbESUHmGG-HWnmQ",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/D94jwCcmbESUHmGG-HWnmQ",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/98lpRkBx5UmxSwCMPUj_qQ",
+  "Created": "2024-05-15T13:31:58.206856Z",
+  "Updated": "2024-05-15T13:32:55.7083244Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

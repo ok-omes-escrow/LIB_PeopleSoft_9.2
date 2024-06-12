@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Return to Search",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "PDDnA0-xIEm0d-blcRMnfg",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/PDDnA0-xIEm0d-blcRMnfg",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/o4SDkhYJxkW_FS2XHWINsA",
+  "Created": "2024-05-13T12:21:12.9294786Z",
+  "Updated": "2024-05-13T12:21:41.9364575Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

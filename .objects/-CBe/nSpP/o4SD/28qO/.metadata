@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Check Result Page",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "28qOSYnjn0KVghaOmS9Z0g",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/28qOSYnjn0KVghaOmS9Z0g",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/o4SDkhYJxkW_FS2XHWINsA",
+  "Created": "2024-05-13T09:16:29.3587895Z",
+  "Updated": "2024-05-13T09:18:41.7591047Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

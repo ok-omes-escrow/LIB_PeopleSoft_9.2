@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Create Customer Information",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "TOlKhHr2QE22NFmEhg2xqA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/TOlKhHr2QE22NFmEhg2xqA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/n1Y4WobQX0m5jtfJR4zsmQ",
+  "Created": "2024-05-13T07:44:31.8645732Z",
+  "Updated": "2024-05-13T09:02:25.7991064Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "LDA Email Address",
+  "Type": "Element",
+  "TaxonomyType": "Email",
+  "Id": "T8HL770mi0ic3YSCj2Ic8Q",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/T8HL770mi0ic3YSCj2Ic8Q",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/98lpRkBx5UmxSwCMPUj_qQ",
+  "Created": "2024-05-15T13:25:44.5160845Z",
+  "Updated": "2024-05-15T13:27:40.0542524Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

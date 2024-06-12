@@ -1,0 +1,53 @@
+{
+  "DisplayName": "Get Email Address for the Customer",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_strCustomerID",
+      "DisplayName": "in_strCustomerID",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strPeoplesoftURL",
+      "DisplayName": "in_strPeoplesoftURL",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_strSetID",
+      "DisplayName": "in_strSetID",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "out_strEmailAddress",
+      "DisplayName": "out_strEmailAddress",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "DataSourceItems": null
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Edge: General Information",
+  "Type": "Screen",
+  "Id": "o4SDkhYJxkW_FS2XHWINsA",
+  "Reference": "ao86_PT9xkmS2L7lE3WumQ/o4SDkhYJxkW_FS2XHWINsA",
+  "ParentRef": "ao86_PT9xkmS2L7lE3WumQ/nSpPxvg0_kuOWgXwF3AoOA",
+  "Created": "2024-05-13T09:05:24.9921529Z",
+  "Updated": "2024-05-13T09:05:37.8531479Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
