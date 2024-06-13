@@ -11,7 +11,7 @@
     <x:Null />
   </VisualBasic.Settings>
   <sap2010:Annotation.AnnotationText>UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9</sap2010:Annotation.AnnotationText>
-  <sap:VirtualizedContainerService.HintSize>1100,3740.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1100,3776.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Download_File_From_Process_Monitor_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -113,11 +113,23 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_Email_Address_For_The_Customer" sap:VirtualizedContainerService.HintSize="1110.4,3676" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Email_Address_For_The_Customer" sap:VirtualizedContainerService.HintSize="1110.4,3712" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Default="3" Name="intShortTimeout" />
-      <Variable x:TypeArguments="x:Int32" Default="5" Name="intMediumTimeout" />
-      <Variable x:TypeArguments="x:Int32" Default="30" Name="intVeryLongTimeout" />
+      <Variable x:TypeArguments="x:Int32" Name="intShortTimeout">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="3" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="intMediumTimeout">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="5" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:Int32" Name="intVeryLongTimeout">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Int32" Value="30" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="strViewLogTraceWindowCounter" />
       <Variable x:TypeArguments="x:String" Name="strProcessDetailWindowCounter" />
       <Variable x:TypeArguments="x:String" Name="strDownloadFileName">
@@ -142,13 +154,13 @@
         <InArgument x:TypeArguments="x:String">[in_strPeoplesoftURL]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="1048,3077.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4b44dd36-423a-4c08-80e3-fda7afee44ee" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge: Process Monitor" sap:VirtualizedContainerService.HintSize="1048,3113.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4b44dd36-423a-4c08-80e3-fda7afee44ee" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Download file" sap:VirtualizedContainerService.HintSize="1014.4,2860.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Download file" sap:VirtualizedContainerService.HintSize="1014.4,2896.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="strElementClass" />
               <Variable x:TypeArguments="x:String" Name="strElementControlID" />
@@ -205,7 +217,7 @@
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
             <ui:LogMessage DisplayName="Log Message Click Search Button" sap:VirtualizedContainerService.HintSize="952,144" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Clicking Search Button&quot;]" />
-            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="[in_intDelayForActivity]" DisplayName="Click 'Search Button'" sap:VirtualizedContainerService.HintSize="952,157.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="[in_intDelayForActivity]" DisplayName="Click 'Search Button'" sap:VirtualizedContainerService.HintSize="952,193.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://financials.ok.gov/psc/SOKLFPRD/EMPLOYEE/ERP/c/MAINTAIN_CUSTOMERS.CUSTOMER_GENERAL.GBL?PortalActualURL=https%3a%2f%2ffinancials.ok.gov%2fpsc%2fSOKLFPRD%2fEMPLOYEE%2fERP%2fc%2fMAINTAIN_CUSTOMERS.CUSTOMER_GENERAL.GBL&amp;PortalContentURL=https%3a%2f%2ffinancials.ok.gov%2fpsc%2fSOKLFPRD%2fEMPLOYEE%2fERP%2fc%2fMAINTAIN_CUSTOMERS.CUSTOMER_GENERAL.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Create%20Customer%20Information&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2ffinancials.ok.gov%2fpsp%2fSOKLFPRD%2f&amp;PortalURI=https%3a%2f%2ffinancials.ok.gov%2fpsc%2fSOKLFPRD%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="PxxnDCjTDEKZ5dpOjvwr2w" DesignTimeRectangle="44, 969, 58, 22" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='#ICSearch' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='#ICSearch' tag='INPUT' type='button' class='PSPUSHBUTTONTBSEARCH PSPRIMARY' aaname='Search' check:text='Search' /&gt;" Guid="ca501a03-95e1-49c9-ad18-625a9983026f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAaCAYAAADv/O9kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAM5SURBVFhH7Va9auNAEL6HuffwE+QF0rm7Lt1Vboy7tC6S4iBpEgiYFOfOaWIwxClkk4BVxAoiWAShIMwGI2Qb82VmtSuvZOty+IoLyANfsbOzs/vtzs9++350hzJiT7xs2BMvG/bEy4Y98TUGqPUEnGiFtawgxAztq4ec7RfDfSRP69xvmcshR3yAxngpFwNLBH4EhyG0bkVObcP+i2Fn4s03THhlJNCoG3pC5VzNLd5xbOi/FHYmfi0gaKEYuxkjjVOXw3+O7oWpH+DoVmCS7CklSYuBYcOwcWZHEAtlxLJYYjJ+RTW1cdFnP36Ilq9SbRGh/UvNn7yi6y8RJzNyvWMb6zVx6wUdstMSR+Qjd54s8bqPEVtG7zg7zx98Oxr2PHFOZLvWG9r2DIEkt0T/WvsYqEujS/EFOtLuPb2swHaUnSLOQoftWiH64wA/ee4kgCP9rhB4U7StKUZC+dQPpYiz6PN03Di5qFykbhS3am8mX11KNIfj0ia9F1SPs3YSKjVi7xUHpr7uYciHDN9wKHW+HMd+oMYKOrVIn+g08Tk6J4Yd4Vhe3ArDG/NBbHRCUtNDnfJYEw9DI4r0Wn6ItW6DOKPSdNEaRwgylZ0OHopMJFSsJOgmLr0gv6KBoby9CC3D7yYU0TBUF6LGXGMyds8F+hwU8YmVi9Ytub+VeAb1EX789tH15ipkiIx6jXUHKBK65aucrysPLQ5hjy9WmaWEiohTmLNdGhkF2EKwSP85cQMHvcSBGD/LcUI8G0LbQW3SVrkmZYWYC5s3w4RT4n8Tv/R5OkanudZlcDFFQBa6mBw+qlB/HG3amlDrOKQbTTMMVS34lHhxqNf48nXl35X4ocrZOAxR2yhm1I68JLRHPXX4or5f1wSyRSefewe3syQKPiVeUNzSfZT9rsSZXNo/SYRQPzd/nlZ6rszrimn89BYxho9mmzJ+efrFKS0cm4sf5bjRZ/+G+Lqdce8PyceUvtU85n1UxO1OnPGAmsWHpzyU5onE1NpG1nO2bUnQ396i3p34lhJHMfq3T6gYdtXcJ4c/FZ2bJ1x6coS2TK8/EGfkPzByH+ML/W/Ey4E98bJhT7xcuMMHytij46hJOxYAAAAASUVORK5CYII=" InformativeScreenshot="c6d62ceac4e93656939b710a6e48b272.png" Reference="ao86_PT9xkmS2L7lE3WumQ/yfht6yVE4kOM8qHRMbGgkw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create Customer Information' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -215,6 +227,25 @@
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="Button 'Search Button'" Mode="Disappears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Target>
+                    <uix:TargetAnchorable BrowserURL="https://financials.ok.gov/psc/SOKLFPRD/EMPLOYEE/ERP/c/MAINTAIN_CUSTOMERS.CUSTOMER_GENERAL.GBL?PortalActualURL=https%3a%2f%2ffinancials.ok.gov%2fpsc%2fSOKLFPRD%2fEMPLOYEE%2fERP%2fc%2fMAINTAIN_CUSTOMERS.CUSTOMER_GENERAL.GBL&amp;PortalContentURL=https%3a%2f%2ffinancials.ok.gov%2fpsc%2fSOKLFPRD%2fEMPLOYEE%2fERP%2fc%2fMAINTAIN_CUSTOMERS.CUSTOMER_GENERAL.GBL&amp;PortalContentProvider=ERP&amp;PortalCRefLabel=Create%20Customer%20Information&amp;PortalRegistryName=EMPLOYEE&amp;PortalServletURI=https%3a%2f%2ffinancials.ok.gov%2fpsp%2fSOKLFPRD%2f&amp;PortalURI=https%3a%2f%2ffinancials.ok.gov%2fpsc%2fSOKLFPRD%2f&amp;PortalHostNode=ERP&amp;NoCrumbs=yes&amp;PortalKeyStruct=yes" ContentHash="PxxnDCjTDEKZ5dpOjvwr2w" DesignTimeRectangle="44, 969, 58, 22" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Search Button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='#ICSearch' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='#ICSearch' tag='INPUT' type='button' class='PSPUSHBUTTONTBSEARCH PSPRIMARY' aaname='Search' check:text='Search' /&gt;" Guid="ca501a03-95e1-49c9-ad18-625a9983026f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAaCAYAAADv/O9kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAM5SURBVFhH7Va9auNAEL6HuffwE+QF0rm7Lt1Vboy7tC6S4iBpEgiYFOfOaWIwxClkk4BVxAoiWAShIMwGI2Qb82VmtSuvZOty+IoLyANfsbOzs/vtzs9++350hzJiT7xs2BMvG/bEy4Y98TUGqPUEnGiFtawgxAztq4ec7RfDfSRP69xvmcshR3yAxngpFwNLBH4EhyG0bkVObcP+i2Fn4s03THhlJNCoG3pC5VzNLd5xbOi/FHYmfi0gaKEYuxkjjVOXw3+O7oWpH+DoVmCS7CklSYuBYcOwcWZHEAtlxLJYYjJ+RTW1cdFnP36Ilq9SbRGh/UvNn7yi6y8RJzNyvWMb6zVx6wUdstMSR+Qjd54s8bqPEVtG7zg7zx98Oxr2PHFOZLvWG9r2DIEkt0T/WvsYqEujS/EFOtLuPb2swHaUnSLOQoftWiH64wA/ee4kgCP9rhB4U7StKUZC+dQPpYiz6PN03Di5qFykbhS3am8mX11KNIfj0ia9F1SPs3YSKjVi7xUHpr7uYciHDN9wKHW+HMd+oMYKOrVIn+g08Tk6J4Yd4Vhe3ArDG/NBbHRCUtNDnfJYEw9DI4r0Wn6ItW6DOKPSdNEaRwgylZ0OHopMJFSsJOgmLr0gv6KBoby9CC3D7yYU0TBUF6LGXGMyds8F+hwU8YmVi9Ytub+VeAb1EX789tH15ipkiIx6jXUHKBK65aucrysPLQ5hjy9WmaWEiohTmLNdGhkF2EKwSP85cQMHvcSBGD/LcUI8G0LbQW3SVrkmZYWYC5s3w4RT4n8Tv/R5OkanudZlcDFFQBa6mBw+qlB/HG3amlDrOKQbTTMMVS34lHhxqNf48nXl35X4ocrZOAxR2yhm1I68JLRHPXX4or5f1wSyRSefewe3syQKPiVeUNzSfZT9rsSZXNo/SYRQPzd/nlZ6rszrimn89BYxho9mmzJ+efrFKS0cm4sf5bjRZ/+G+Lqdce8PyceUvtU85n1UxO1OnPGAmsWHpzyU5onE1NpG1nO2bUnQ396i3p34lhJHMfq3T6gYdtXcJ4c/FZ2bJ1x6coS2TK8/EGfkPzByH+ML/W/Ey4E98bJhT7xcuMMHytij46hJOxYAAAAASUVORK5CYII=" InformativeScreenshot="c6d62ceac4e93656939b710a6e48b272.png" Reference="ao86_PT9xkmS2L7lE3WumQ/yfht6yVE4kOM8qHRMbGgkw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create Customer Information' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="155, 969, 44, 22" ElementType="Button" FriendlyName="'Search Button'" FullSelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='#ICClear' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='ptifrmtgtframe' tag='IFRAME' /&gt;&lt;webctrl id='#ICClear' tag='INPUT' type='button' class='PSPUSHBUTTONTBCLEAR' aaname='Clear' check:text='Clear' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAaCAYAAADxNd/XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAK1SURBVFhH7ZaxayJBFMbvj7Gys0uX7jorOzs7uxQ2FtuI2FjYXKGFkDQRBLGI3dnEKqvoLp7sEowi4eSQiMWGIIkW373ZeZtdV0XPgzM5/GCLmXnjvN/M92b8gk+uE8CxdQI4tk4Ax9b/CvCGp44BJavi7OIOAfqCCRXx4j0Ma8kxrB9dGm+hMuH2P9Y6wGKCSlYmHc51UWkOoXYGqFy1EbZh2pSsB+JjATxDLaqUkIp0x+I+j2YDKEmCSPZgcNfHAhgbiNAun18/cse6rFsNZ0obtTF3bASwYNR1RBKO/Vq4KA/xxKOuZlDLGqJiU+zTvbN/u9CZ8bjQFJUMjRUH0K9bCFFMKKnzmA9gUJW7Xxpxxz5aA5iiZltQpaT7ZL8hamVpv2DWxE+OEqfdyK/GNepdxG0YFYUHx6YMIBJPdVETdq67CXoAlmQfEahD5Z695AN47egIUvty9CY7HI3k6SqduWzP+rYdY/WpbDtiF7j9DoCGBk/1ygPgBHbhHtAeWgHgTUhoKNGOil11PwNxSixQ3HW8I6QpLlz9xW3OK2NusKDPQvpfn4B73Fu/7P1qIosXWOMxAfZRutLZQvS9g/4BwFO9RZN31ABZIZpsQWlyoW0C2LLYqp5hlGVRioTFOxPOaEhXqQ4OBdh9Cy2p0CVkweQiWwGYc2GSXxf26HaZPZzTWrHyGJY3dkFX9cEAnpth0zvwSrsfE7vltcHGIqbEbnzLTUx7buRGeluetjtPagmrqdnzDwQgzR9RSAkI70tM/szzcSepyL23gQ+AUnNf8m8GGlTAtaqOqHgTvHMfevhKMUGFCp7XuMzxPS/WORjAFj1Et1RQivru0RD53n6M/NZYAxCSD5TzkAXI39G86fsftaT/W86978QY0GczfM9RO2Xwm3EQwOfRCeDYOgEcV8BvSiVVkhEFBK0AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:VerifyExecutionOptions.Target>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
             </uix:NClick>
             <ui:LogMessage DisplayName="Log Message Check Search Result" sap:VirtualizedContainerService.HintSize="952,144" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Check if the Search Result appeared&quot;]" />
             <uix:NCheckState DisplayName="Check App State 'Check Result Page'" sap:VirtualizedContainerService.HintSize="952,608" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V3">
