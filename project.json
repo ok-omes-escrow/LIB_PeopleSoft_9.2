@@ -1,5 +1,6 @@
 {
   "name": "LIB_PeopleSoft_9.2",
+  "projectId": "193dcb82-e0c4-47d8-8272-c5ec889477d3",
   "description": "This library interacts with Peoplesoft application for OMES",
   "main": "NewActivity.xaml",
   "dependencies": {
@@ -10,7 +11,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.4.5.0",
-  "projectVersion": "1.0.4",
+  "projectVersion": "1.0.5",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -42,7 +43,7 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "isTemplate": false,

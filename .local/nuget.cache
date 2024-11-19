@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GWRezbkntB9LbBB9EQvBVIMy6O25m63Qr2hX28CACmGokSMmWrT1wDEOIQoSN/uYmZOLIcVAOKvs3dsrjoBbxg==",
+  "dgSpecHash": "KEmkdsZW5YR0YZ6owf4TRk4sqTubSD1Tt537VEcrwNg74JnaFxCf+TXiQe4uWkpyTpOAOw5cdhWn0vg2AIBpQQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\svc_prod.robot01\\Documents\\UiPath\\LIB_PeopleSoft_9\\.local\\",
   "expectedPackageFiles": [
@@ -112,8 +112,6 @@
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\runtime.win.system.net.primitives\\4.3.0\\runtime.win.system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\runtime.win.system.net.sockets\\4.3.0\\runtime.win.system.net.sockets.4.3.0.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\runtime.win.system.runtime.extensions\\4.3.0\\runtime.win.system.runtime.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\runtime.win7-x64.runtime.native.system.io.compression\\4.3.0\\runtime.win7-x64.runtime.native.system.io.compression.4.3.0.nupkg.sha512",
-    "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\runtime.win7.system.private.uri\\4.3.0\\runtime.win7.system.private.uri.4.3.0.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\sharpziplib\\1.3.3\\sharpziplib.1.3.3.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\system.activities.viewmodels\\1.0.0-20230306.1\\system.activities.viewmodels.1.0.0-20230306.1.nupkg.sha512",
     "C:\\Users\\svc_prod.robot01\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",

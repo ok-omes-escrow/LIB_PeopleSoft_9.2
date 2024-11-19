@@ -92,6 +92,11 @@
       "Path": "Refresh Process Monitor.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bool_ProcessNameStatus&Sequence_3",
+        "str_ProcessName_FromWebPage&Sequence_13",
+        "str_UserId_FromWebPage&Sequence_13",
+        "bool_UserIdTypeStatus&Sequence_3",
+        "str_UserId_FromWebPage&Sequence_10",
         "strAaname&Sequence_8",
         "ienumChildren&Sequence_5",
         "uielementIntervalDropdown&Sequence_5",
@@ -99,6 +104,9 @@
         "strURL&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_strProcessName",
+        "in_strUserTypeStatusException",
+        "in_intRetryCount",
         "in_strDropDownException",
         "in_intDuration",
         "in_strFilterUserID",
